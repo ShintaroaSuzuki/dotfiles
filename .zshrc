@@ -9,6 +9,12 @@ fi
 [ -f /usr/local/bin/tmux ] && [ $SHLVL = 1 ] && tmux
 
 #--------------------------
+# nodenv conifg
+#--------------------------
+export PATH="$HOME/.nodenv/bin:$PATH"
+eval "$(nodenv init -)"
+
+#--------------------------
 # zsh Configuration
 #--------------------------
 
