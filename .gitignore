@@ -1,0 +1,9 @@
+/*
+/.**
+
+!/.gitignore
+!/.zshrc
+!/.tmux.conf
+!/.config/nvim/init.vim
+!/.config/nvim/plug.vim
+!/.config/nvim/map.vim
