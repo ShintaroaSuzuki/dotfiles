@@ -5,11 +5,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# 初回シェル時のみ tmux実行
-[ -f /usr/local/bin/tmux ] && [ $SHLVL = 1 ] && tmux
-
 #--------------------------
-# nodenv conifg
+# nodenv config
 #--------------------------
 export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init -)"
@@ -147,4 +144,8 @@ fi
 if [ -e "${HOME}/.iterm2_shell_integration.zsh" ]; then
     source "${HOME}/.iterm2_shell_integration.zsh"
 fi
+
+# 初回シェル時のみ tmux実行
+[ -f /usr/local/bin/tmux ] && [ $SHLVL = 1 ] && tmux
+
 
