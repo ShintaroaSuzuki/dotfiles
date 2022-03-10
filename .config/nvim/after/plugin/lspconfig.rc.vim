@@ -6,6 +6,25 @@ lua << EOF
 --vim.lsp.set_log_level("debug")
 EOF
 
+lua <<EOF
+  lspconfig = require "lspconfig"
+  util = require "lspconfig/util"
+
+  lspconfig.gopls.setup {
+    cmd = {"gopls", "serve"},
+    filetypes = {"go", "gomod"},
+    root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+    settings = {
+      gopls = {
+        analyses = {
+          unusedparams = true,
+        },
+        staticcheck = true,
+      },
+    },
+  }
+EOF
+
 lua << EOF
 local nvim_lsp = require('lspconfig')
 local protocol = require'vim.lsp.protocol'

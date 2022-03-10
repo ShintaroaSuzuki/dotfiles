@@ -5,7 +5,7 @@
 let g:python3_host_prog = '/Users/shintaro/.pyenv/shims/python3'
 
 " node setting
-" let g:node_host_prog = '/Users/shintaro/.nodenv/versions/16.6.2/lib/node_modules/neovim'
+" let g:node_host_prog = '/Users/shintaro/.nodenv/versions/14.17.5/lib/node_modules/neovim'
 
 " init autocmd
 autocmd!
