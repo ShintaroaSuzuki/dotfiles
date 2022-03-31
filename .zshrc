@@ -1,3 +1,7 @@
+# Fig pre block. Keep at the top of this file.
+export PATH="${PATH}:${HOME}/.local/bin"
+eval "$(fig init zsh pre)"
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -12,13 +16,18 @@ export PATH="$HOME/.nodenv/bin:$PATH"
 eval "$(nodenv init -)"
 
 #--------------------------
-# nodenv config
+# goenv config
 #--------------------------
 export GOENV_ROOT="$HOME/.goenv"
 export PATH="$GOENV_ROOT/bin:$PATH"
 eval "$(goenv init -)"
 export PATH="$GOROOT/bin:$PATH"
 export PATH="$PATH:$GOPATH/bin"
+
+#--------------------------
+# goenv config
+#--------------------------
+eval "$(pyenv init --path)"
 
 #--------------------------
 # zsh Configuration
@@ -157,4 +166,14 @@ fi
 # 初回シェル時のみ tmux実行
 [ -f /usr/local/bin/tmux ] && [ $SHLVL = 1 ] && tmux
 
+
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/shintaro/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/shintaro/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/shintaro/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/shintaro/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Fig post block. Keep at the bottom of this file.
+eval "$(fig init zsh post)"
 
