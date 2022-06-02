@@ -174,3 +174,27 @@ if [ -f '/Users/shintaro/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/
 
 # Fig post block. Keep at the bottom of this file.
 . "$HOME/.fig/shell/zshrc.post.zsh"
+
+
+# Pythonの仮想環境の操作を簡単にする
+function venv() {
+  case $1 in
+    init)
+      local CMD='python3 -m venv .venv'
+      echo $CMD
+      eval $CMD
+      ;;
+    activate)
+      if [ ! -d "./.venv" ]; then
+        echo '.venv not found. run `venv init`.'
+        return 1
+      fi
+      local CMD='source .venv/bin/activate'
+      echo $CMD
+      eval $CMD
+      ;;
+    *)
+      venv activate
+      ;;
+  esac
+}
