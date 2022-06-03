@@ -198,3 +198,40 @@ function venv() {
       ;;
   esac
 }
+
+# Nest.jsへのtailwindcssの導入の自動化
+function next-tailwind() {
+  if [ $# != 1 ]; then
+    echo "invalid auguments"
+    return 1
+  fi
+
+  case $1 in
+    init)
+      if [ ! -e "./next.config.js" ]; then
+        echo 'this directory is not next.js project'
+        return 1
+      fi
+
+      local CMD
+
+      CMD="yarn add -D tailwindcss postcss autoprefixer"
+      echo $CMD
+      eval $CMD
+
+      CMD="yarn tailwindcss init -p"
+      echo $CMD
+      eval $CMD
+
+      echo "update tailwind.config.js"
+      cp ~/.templates/tailwind.config.js ./tailwind.config.js
+
+      echo "update styles/globals.css"
+      cp ~/.templates/globals.css ./styles/globals.css
+
+      ;;
+    *)
+      echo "not found command: $1"
+      ;;
+  esac
+}

@@ -6,3 +6,4 @@
 !/.zshrc
 !/.tmux.conf
 !/.config/nvim/**
+!/.templates/**
