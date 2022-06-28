@@ -23,6 +23,7 @@ if has("nvim")
   Plug 'github/copilot.vim'
   Plug 'nvim-lualine/lualine.nvim'
   Plug 'kyazdani42/nvim-web-devicons'
+  Plug 'windwp/nvim-autopairs'
 endif
 
 call plug#end()

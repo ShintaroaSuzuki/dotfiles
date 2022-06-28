@@ -89,3 +89,8 @@ augroup END
 lua << END
   require('lualine').setup()
 END
+
+" nvim-autopairs
+lua << EOF
+  require('nvim-autopairs').setup {}
+EOF
