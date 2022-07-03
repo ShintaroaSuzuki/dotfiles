@@ -237,9 +237,10 @@ function next-tailwind() {
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"
 
 # prisma-nestjs-graphqlでの生成したファイルをプロジェクトのフォルダに移行する
-function move-prisma-model() {
+function copy-prisma-model() {
   # model.tsの移動
-  echo "move model.ts"
+  echo "make folder"
   ls src/@generated/prisma-nestjs-graphql/*/*.model.ts | sed 's/src\/\@generated\/prisma-nestjs-graphql\///g' | sed 's/\/.*//g' | xargs -I {} sh -c 'mkdir src/{}'
+  echo "copy model.ts"
   ls src/@generated/prisma-nestjs-graphql/*/*.model.ts | sed 's/src\/\@generated\/prisma-nestjs-graphql\///g' | xargs -I {} sh -c 'cp src/@generated/prisma-nestjs-graphql/{} src/{}'
 }
