@@ -1,0 +1,1 @@
+/Users/shintaro/settings/unix/home/.zsh

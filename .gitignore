@@ -4,6 +4,7 @@
 !/README.md
 !/.gitignore
 !/.zshrc
+!/.zsh/**
 !/.tmux.conf
 !/.config/nvim/**
 !/.templates/**
