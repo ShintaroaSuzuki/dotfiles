@@ -11,6 +11,7 @@ fi
 # nodenv config
 #--------------------------
 export PATH="$HOME/.nodenv/bin:$PATH"
+export PATH="/Users/shintaro/.nodenv/versions/16.16.0/bin:$PATH"
 eval "$(nodenv init -)"
 
 #--------------------------
@@ -23,7 +24,7 @@ export PATH="$GOROOT/bin:$PATH"
 export PATH="$PATH:$GOPATH/bin"
 
 #--------------------------
-# goenv config
+# pyenv config
 #--------------------------
 eval "$(pyenv init --path)"
 
@@ -34,18 +35,6 @@ eval "$(pyenv init --path)"
 #---------------------
 # Import settings
 #---------------------
-# Init Antigen
-source $HOME/.zsh/antigen.zsh
-
-if [ -e /proc/version ] && grep -iq microsoft /proc/version; then
-  OS="wsl"
-else
-  OS="$($HOME/.misc/get-osdist.sh | sed -n 1P)"
-fi
-PROFILE_DIR="$HOME/.zsh/profile/$OS.zsh"
-if [ -e $PROFILE_DIR ]; then
-    source $PROFILE_DIR
-fi
 
 if [ -e $HOME/.zsh_profile ]; then
     source $HOME/.zsh_profile
@@ -61,10 +50,6 @@ path=(
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-source $HOME/.zsh/color.zsh
-source $HOME/.zsh/alias.zsh
-source $HOME/.zsh/util.zsh
-
 #-----------------------
 # Misc Settings
 #-----------------------
@@ -79,34 +64,15 @@ DISABLE_AUTO_TITLE=false
 #----------------------
 # Bind Key
 #----------------------
-# bindkey -e
-# bindkey "^?"    backward-delete-char
-# bindkey "^U"    backward-kill-line
-
-# bindkey '^[[Z' reverse-menu-complete
-
-# bindkey '^[[A' history-substring-search-up
-# bindkey '^[[B' history-substring-search-down
-# # bindkey "$terminfo[kcuu1]" history-substring-search-up
-# # bindkey "$terminfo[kcud1]" history-substring-search-down
-
-# bindkey '^[[L' forward-word
-
-# bindkey '[C' forward-word
-# bindkey '[D' backward-word
-# bindkey "\e[1;5C" forward-word
-# bindkey "\e[1;5D" backward-word
-# bindkey "\e[5C" forward-word
-# bindkey "\e[5D" backward-word
-# bindkey "\e\e[C" forward-word
-# bindkey "\e\e[D" backward-word
-
-# unset LC_ALL
-# export LC_ALL='en_US.UTF-8'
 
 #----------------
 # Completion
 #----------------
+autoload -U compinit
+compinit
+
+LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
+
 # Option
 setopt auto_param_slash
 setopt mark_dirs
@@ -129,10 +95,9 @@ setopt nonomatch
 cdpath=(
   $HOME(N-/)
   $HOME/Documents(N-/)
-  $HOME/Documents/cl2(N-/)
-  $HOME/Development(N-/)
   $cdpath
 )
+
 zstyle ':completion:*:cd:*' tag-order local-directories path-directories
 
 zstyle ':completion:*' completer _expand _complete _match _prefix _approximate _list _history
@@ -142,29 +107,23 @@ zstyle ':completion:*:default' menu select=2
 zstyle ':completion:*:descriptions' format '%F{yellow}-- %d --%f'
 zstyle ':completion:*:options' description 'yes'
 
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' list-colors $LS_COLORS
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' use-cache false
 
 export WORDCHARS="*?_-.[]~=&;!#$%^(){}<>"
 
-# source $HOME/.zsh/greeting.zsh
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-if [ -f ~/usr/local/bin/tmux ] && [ $SHLVL = 1 ]; then
-  tmux
-fi
 
 if [ -e "${HOME}/.iterm2_shell_integration.zsh" ]; then
     source "${HOME}/.iterm2_shell_integration.zsh"
 fi
 
-# 初回シェル時のみ tmux実行
-[ -f /usr/local/bin/tmux ] && [ $SHLVL = 1 ] && tmux
-
-
+# tmux auto start
+if [ -z "$TMUX" ]; then
+  exec tmux new-session -A
+fi
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/shintaro/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/shintaro/google-cloud-sdk/path.zsh.inc'; fi
@@ -233,9 +192,6 @@ function next-tailwind() {
   esac
 }
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"
-
 # prisma-nestjs-graphqlでの生成したファイルをプロジェクトのフォルダに移行する
 function copy-prisma-model() {
   # model.tsの移動
@@ -244,3 +200,47 @@ function copy-prisma-model() {
   echo "copy model.ts"
   ls src/@generated/prisma-nestjs-graphql/*/*.model.ts | sed 's/src\/\@generated\/prisma-nestjs-graphql\///g' | xargs -I {} sh -c 'cp src/@generated/prisma-nestjs-graphql/{} src/{}'
 }
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+# git 切り替え
+function git-x1() {
+  git config --global user.name shintaro-x1
+  git config --global user.email suzuki.s@x-point-1.net
+}
+
+function git-private() {
+  git config --global user.name shintaroasuzuki
+  git config --global user.email shinbo.dorapion19971221@gmail.com
+}
+
+# tmux の設定
+function ide() {
+  if [ "$#" -eq 0 ]; then
+    DIR="."
+  else
+    DIR=$1
+  fi
+
+  cd $DIR
+  tmux split-window -v
+  tmux resize-pane -D 10
+  tmux select-pane -t 0
+  nvim
+}
+
+# https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
+source /Users/shintaro/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#333333,bg=transparent,bold,underline'
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"
+
+#--------------------------
+# alias settings
+#--------------------------
+alias ls="ls -a"
+alias git-tree="git ls-tree -r --name-only HEAD | tree --fromfile"
+alias s="tmux copy-mode" # "S"croll

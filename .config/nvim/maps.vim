@@ -34,3 +34,7 @@ nmap <C-w><down> <C-w>-
 nnoremap <C-j> :LspNextError<CR>
 nnoremap <S-C-j> :LspPreviousError<CR>
 nnoremap <C-k> :LspHover<CR>
+nnoremap <C-l> :LspDocumentDiagnostics<CR>
+
+" fzf
+nnoremap ff :Files<CR>

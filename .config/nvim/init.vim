@@ -1,6 +1,22 @@
 " python3 setting
 let g:python3_host_prog = '/Users/shintaro/.pyenv/shims/python3'
 
+" Enable flake8 and mypy
+let g:lsp_settings = {
+\  'pylsp-all': {
+\    'workspace_config': {
+\      'pylsp': {
+\        'configurationSources': ['flake8'],
+\        'plugins': {
+\          'pylsp_mypy': {
+\            'enabled': 1
+\          }
+\        }
+\      }
+\    }
+\  }
+\}
+
 " init autocmd
 autocmd!
 " set script encoding
@@ -24,12 +40,19 @@ set clipboard=unnamedplus
 
 " indents
 filetype plugin indent on
-set shiftwidth=2
-set tabstop=2
+set shiftwidth=4
+set tabstop=4
 set ai "Auto indent
 set si "Smart indent
 set nowrap "No Wrap lines
 set backspace=start,eol,indent
+
+" indentLine
+let g:indentLine_enebled = 0
+let g:indentLine_char = '¦'
+let g:indentLine_leadingSpaceEnabled = 1
+let g:indentLine_leadingSpaceChar = '.'
+let g:indentLine_fileTypeExclude = ['nerdtree']
 
 " Finding files - Search down into subfolders
 set path+=**
@@ -77,6 +100,9 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 " Close the tab if NERDTree is the only window remaining in it.
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
+" show hidden files in NERDTree
+let NERDTreeShowHidden = 1
+
 set exrc
 
 " vim-prettier
@@ -94,3 +120,13 @@ END
 lua << EOF
   require('nvim-autopairs').setup {}
 EOF
+
+" vim-black
+augroup black_on_save
+  autocmd!
+  autocmd BufWritePre *.py Black
+augroup end
+
+" vim-easy-align
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
