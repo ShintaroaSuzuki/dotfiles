@@ -200,6 +200,7 @@ function copy-prisma-model() {
   echo "copy model.ts"
   ls src/@generated/prisma-nestjs-graphql/*/*.model.ts | sed 's/src\/\@generated\/prisma-nestjs-graphql\///g' | xargs -I {} sh -c 'cp src/@generated/prisma-nestjs-graphql/{} src/{}'
 }
+<<<<<<< HEAD
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # git 切り替え
@@ -244,3 +245,8 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#333333,bg=transparent,bold,underline'
 alias ls="ls -a"
 alias git-tree="git ls-tree -r --name-only HEAD | tree --fromfile"
 alias s="tmux copy-mode" # "S"croll
+=======
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"
+>>>>>>> refs/remotes/origin/main
