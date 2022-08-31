@@ -236,17 +236,12 @@ source /Users/shintaro/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#333333,bg=transparent,bold,underline'
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"
-
 #--------------------------
 # alias settings
 #--------------------------
 alias ls="ls -a"
 alias git-tree="git ls-tree -r --name-only HEAD | tree --fromfile"
 alias s="tmux copy-mode" # "S"croll
-=======
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"
->>>>>>> refs/remotes/origin/main
