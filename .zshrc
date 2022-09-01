@@ -116,6 +116,15 @@ export WORDCHARS="*?_-.[]~=&;!#$%^(){}<>"
 #--------------------------
 source /opt/homebrew/share/antigen/antigen.zsh
 
+# https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
+antigen bundle zsh-users/zsh-autosuggestions
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#333333,bg=transparent,bold,underline'
+
+antigen apply
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -231,13 +240,6 @@ function ide() {
   tmux select-pane -t 0
   nvim
 }
-
-# https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
-antigen bundle zsh-users/zsh-syntax-highlighting
-
-# https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
-antigen bundle zsh-users/zsh-autosuggestions
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#333333,bg=transparent,bold,underline'
 
 #--------------------------
 # alias settings
