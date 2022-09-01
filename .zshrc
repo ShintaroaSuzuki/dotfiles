@@ -111,6 +111,11 @@ zstyle ':completion:*' use-cache false
 
 export WORDCHARS="*?_-.[]~=&;!#$%^(){}<>"
 
+#--------------------------
+# antigen config
+#--------------------------
+source /opt/homebrew/share/antigen/antigen.zsh
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -212,7 +217,7 @@ function git-private() {
   git config --global user.email shinbo.dorapion19971221@gmail.com
 }
 
-# tmux の設定
+# tmux を ide のように使う
 function ide() {
   if [ "$#" -eq 0 ]; then
     DIR="."
@@ -228,10 +233,10 @@ function ide() {
 }
 
 # https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
-source /Users/shintaro/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+antigen bundle zsh-users/zsh-syntax-highlighting
 
 # https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+antigen bundle zsh-users/zsh-autosuggestions
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#333333,bg=transparent,bold,underline'
 
 #--------------------------
