@@ -130,3 +130,8 @@ augroup end
 " vim-easy-align
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
+
+" vim-translator
+let g:translator_target_lang = 'ja'
+let g:translator_source_lang = 'auto'
+let g:translator_default_engines = ['google']

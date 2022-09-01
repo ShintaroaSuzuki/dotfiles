@@ -36,5 +36,8 @@ nnoremap <S-C-j> :LspPreviousError<CR>
 nnoremap <C-k> :LspHover<CR>
 nnoremap <C-l> :LspDocumentDiagnostics<CR>
 
+" select all
+nnoremap <C-a> ggVG
+
 " fzf
 nnoremap ff :Files<CR>

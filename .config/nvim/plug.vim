@@ -15,6 +15,7 @@ Plug 'psf/black', { 'branch': 'stable' }
 Plug 'yggdroot/indentline'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'voldikss/vim-translator'
 
 if has("nvim")
   Plug 'preservim/nerdtree'
