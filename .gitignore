@@ -8,3 +8,4 @@
 !/.tmux.conf
 !/.config/nvim/**
 !/.templates/**
+!/Brewfile
