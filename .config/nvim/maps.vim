@@ -41,3 +41,7 @@ nnoremap <C-a> ggVG
 
 " fzf
 nnoremap ff :Files<CR>
+
+" tabline.nvim を使うとタブの方向が逆になるので修正
+nnoremap <silent> <S-Tab> :tabnext<CR>
+nnoremap <silent> <Tab> :tabprevious<CR>
