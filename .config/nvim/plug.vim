@@ -28,7 +28,6 @@ if has("nvim")
   Plug 'prabirshrestha/asyncomplete-lsp.vim'
   " Plug 'github/copilot.vim'
   Plug 'nvim-lualine/lualine.nvim'
-  Plug 'kdheepak/tabline.nvim'
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'windwp/nvim-autopairs'
 endif
