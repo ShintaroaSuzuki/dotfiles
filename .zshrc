@@ -249,7 +249,7 @@ function ide() {
 alias ls="ls -a"
 alias git-tree="git ls-tree -r --name-only HEAD | tree --fromfile"
 alias s="tmux copy-mode" # "S"croll
-alias clear-branch='git branch | grep -v "master\|main\|*" | xargs -r git branch -D'
+git config --global alias.delete '!git branch | grep -v "master\|main\|*" | xargs -r git branch -D'
 git config --global alias.tree 'log --graph --all --format="%x09%C(cyan bold)%an%Creset%x09%C(yellow)%h%Creset %C(magenta reverse)%d%Creset %s"'
 
 # Fig post block. Keep at the bottom of this file.

@@ -41,3 +41,4 @@ nnoremap <C-a> ggVG
 
 " fzf
 nnoremap ff :Files<CR>
+nnoremap fg :Rg<CR>

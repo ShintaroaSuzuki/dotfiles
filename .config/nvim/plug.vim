@@ -17,6 +17,7 @@ Plug 'yggdroot/indentline'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'voldikss/vim-translator'
+Plug 'kamykn/spelunker.vim'
 
 if has("nvim")
   Plug 'preservim/nerdtree'
