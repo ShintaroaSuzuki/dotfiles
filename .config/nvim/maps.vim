@@ -42,3 +42,6 @@ nnoremap <C-a> ggVG
 " fzf
 nnoremap ff :Files<CR>
 nnoremap fg :Rg<CR>
+
+" relativenumber toggle
+nnoremap <leader>rn :set relativenumber!<CR>
