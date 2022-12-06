@@ -12,6 +12,7 @@ brew "luajit", args: ["HEAD"]
 brew "tree-sitter", args: ["HEAD"]
 brew "neovim", args: ["HEAD"]
 brew "nodenv"
+brew "nodenv/nodenv/nodenv-package-rehash"
 brew "pyenv"
 brew "tmux"
 brew "tree"

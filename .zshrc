@@ -12,7 +12,7 @@ fi
 #--------------------------
 export PATH="$HOME/.nodenv/bin:$PATH"
 export PATH="/Users/shintaro/.nodenv/versions/16.16.0/bin:$PATH"
-eval "$(nodenv init -)"
+eval "$(nodenv init - --no-rehash)"
 
 #--------------------------
 # goenv config
@@ -27,6 +27,18 @@ export PATH="$PATH:$GOPATH/bin"
 # pyenv config
 #--------------------------
 eval "$(pyenv init --path)"
+
+
+#--------------------------
+# androidsdk config
+#--------------------------
+export ANDROID_SDK_ROOT=$(brew --prefix)/share/android-commandlinetools
+
+#--------------------------
+# jenv config
+#--------------------------
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
 
 #--------------------------
 # zsh Configuration
