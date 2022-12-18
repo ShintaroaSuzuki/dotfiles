@@ -9,3 +9,8 @@
 !/.config/nvim/**
 !/.templates/**
 !/Brewfile
+!/.hyper.js
+!/.hyper_plugins/local/**
+!/.yabairc
+!/.skhdrc
+!/.hammerspoon/init.lua

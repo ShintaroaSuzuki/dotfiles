@@ -83,8 +83,6 @@ DISABLE_AUTO_TITLE=false
 autoload -U compinit
 compinit
 
-LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
-
 # Option
 setopt auto_param_slash
 setopt mark_dirs
@@ -119,11 +117,19 @@ zstyle ':completion:*:default' menu select=2
 zstyle ':completion:*:descriptions' format '%F{yellow}-- %d --%f'
 zstyle ':completion:*:options' description 'yes'
 
+eval $(gdircolors)
+
 zstyle ':completion:*' list-colors $LS_COLORS
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' use-cache false
 
 export WORDCHARS="*?_-.[]~=&;!#$%^(){}<>"
+
+
+#--------------------------
+# hammerspoon config
+#--------------------------
+eval $(/opt/homebrew/bin/brew shellenv)
 
 #--------------------------
 # antigen config
