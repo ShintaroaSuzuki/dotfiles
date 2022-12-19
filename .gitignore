@@ -8,7 +8,7 @@
 !/.tmux.conf
 !/.config/nvim/**
 !/.templates/**
-!/Brewfile
+!/.Brewfile
 !/.hyper.js
 !/.hyper_plugins/local/**
 !/.yabairc
