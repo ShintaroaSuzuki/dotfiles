@@ -1,5 +1,5 @@
 # open Hyper
-cmd - return : open -a "Hyper"
+shift + alt - n : open -a "Hyper"
 # focus window
 alt - x : yabai -m window --focus recent
 alt - h : yabai -m window --focus west || yabai -m display --focus west
