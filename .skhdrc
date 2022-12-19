@@ -12,6 +12,10 @@ shift + alt - k : yabai -m window --swap north
 shift + alt - l : yabai -m window --swap east
 # minimize window
 shift + alt - m : yabai -m window --minimize
+# toggle window native fullscreen
+shift + alt - f : yabai -m window --toggle native-fullscreen
+# balance size of windows
+shift + alt - 0 : yabai -m space --balance
 # move window
 # shift + cmd - h : yabai -m window --warp west
 # shift + cmd - j : yabai -m window --warp south
