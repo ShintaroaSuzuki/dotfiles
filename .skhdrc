@@ -1,9 +1,9 @@
 # focus window
 alt - x : yabai -m window --focus recent
-alt - h : yabai -m window --focus west
-alt - j : yabai -m window --focus south
-alt - k : yabai -m window --focus north
-alt - l : yabai -m window --focus east
+alt - h : yabai -m window --focus west || yabai -m display --focus west
+alt - j : yabai -m window --focus south || yabai -m display --focus south
+alt - k : yabai -m window --focus north || yabai -m display --focus north
+alt - l : yabai -m window --focus east || yabai -m display --focus east
 # swap window
 shift + alt - x : yabai -m window --swap recent
 shift + alt - h : yabai -m window --swap west
@@ -16,20 +16,25 @@ shift + cmd - j : yabai -m window --warp south
 shift + cmd - k : yabai -m window --warp north
 shift + cmd - l : yabai -m window --warp east
 # move window
-shift + ctrl - a : yabai -m window --move rel:-20:0
-shift + ctrl - s : yabai -m window --move rel:0:20
-shift + ctrl - w : yabai -m window --move rel:0:-20
-shift + ctrl - d : yabai -m window --move rel:20:0
-# increase window size
-shift + alt - a : yabai -m window --resize left:-20:0
-shift + alt - s : yabai -m window --resize bottom:0:20
-shift + alt - w : yabai -m window --resize top:0:-20
-shift + alt - d : yabai -m window --resize right:20:0
+# shift + ctrl - a : yabai -m window --move rel:-20:0
+# shift + ctrl - s : yabai -m window --move rel:0:20
+# shift + ctrl - w : yabai -m window --move rel:0:-20
+# shift + ctrl - d : yabai -m window --move rel:20:0
+# # increase window size
+# shift + alt - a : yabai -m window --resize left:-20:0
+# shift + alt - s : yabai -m window --resize bottom:0:20
+# shift + alt - w : yabai -m window --resize top:0:-20
+# shift + alt - d : yabai -m window --resize right:20:0
 # decrease window size
-shift + cmd - a : yabai -m window --resize left:20:0
-shift + cmd - s : yabai -m window --resize bottom:0:-20
-shift + cmd - w : yabai -m window --resize top:0:20
-shift + cmd - d : yabai -m window --resize right:-20:0
+# shift + cmd - a : yabai -m window --resize left:20:0
+# shift + cmd - s : yabai -m window --resize bottom:0:-20
+# shift + cmd - w : yabai -m window --resize top:0:20
+# shift + cmd - d : yabai -m window --resize right:-20:0
+# resize window
+shift + alt - a : yabai -m window --resize left:-40:0 || yabai -m window --resize right:-40:0
+shift + alt - d : yabai -m window --resize right:40:0 || yabai -m window --resize left:40:0
+shift + alt - s : yabai -m window --resize bottom:0:20 || yabai -m window --resize top:0:20
+shift + alt - w : yabai -m window --resize top:0:-20 || yabai -m window --resize bottom:0:-20
 # rotate tree
 alt - r : yabai -m space --rotate 90
 # mirror tree y-axis
