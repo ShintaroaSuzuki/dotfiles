@@ -9,8 +9,8 @@ alt - l : yabai -m window --focus east || yabai -m display --focus east
 # swap window
 shift + alt - x : yabai -m window --swap recent
 shift + alt - h : yabai -m window --swap west
-shift + alt - j : yabai -m window --swap south
-shift + alt - k : yabai -m window --swap north
+shift + alt - j : yabai -m window --swap south || (yabai -m window --display prev && yabai -m window --focus recent)
+shift + alt - k : yabai -m window --swap north || (yabai -m window --display next && yabai -m window --focus recent)
 shift + alt - l : yabai -m window --swap east
 # minimize window
 shift + alt - m : yabai -m window --minimize
