@@ -1,6 +1,12 @@
 " python3 setting
 let g:python3_host_prog = '/Users/shintaro/.pyenv/shims/python3'
 
+" node setting
+let g:node_host_prog = '/Users/shintaro/.nodenv/versions/16.16.0/lib/node_modules/neovim/bin/cli.js'
+
+" copilot setting
+let g:copilot_node_command = '/Users/shintaro/.nodenv/versions/16.16.0/bin/node'
+
 " Enable flake8 and mypy
 let g:lsp_settings = {
 \  'pylsp-all': {

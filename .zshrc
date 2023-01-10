@@ -6,12 +6,15 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+#
+#--------------------------
+# hammerspoon config
+#--------------------------
+eval $(/opt/homebrew/bin/brew shellenv)
 
 #--------------------------
 # nodenv config
 #--------------------------
-export PATH="$HOME/.nodenv/bin:$PATH"
-export PATH="/Users/shintaro/.nodenv/versions/16.16.0/bin:$PATH"
 eval "$(nodenv init - --no-rehash)"
 
 #--------------------------
@@ -124,12 +127,6 @@ zstyle ':completion:*' group-name ''
 zstyle ':completion:*' use-cache false
 
 export WORDCHARS="*?_-.[]~=&;!#$%^(){}<>"
-
-
-#--------------------------
-# hammerspoon config
-#--------------------------
-eval $(/opt/homebrew/bin/brew shellenv)
 
 #--------------------------
 # antigen config
