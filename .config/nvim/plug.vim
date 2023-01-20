@@ -18,6 +18,9 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'voldikss/vim-translator'
 Plug 'kamykn/spelunker.vim'
+Plug 't9md/vim-quickhl'
+Plug 'osyo-manga/vim-brightest'
+Plug 'kshenoy/vim-signature'
 
 if has("nvim")
   Plug 'preservim/nerdtree'

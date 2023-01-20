@@ -141,3 +141,16 @@ nmap ga <Plug>(EasyAlign)
 let g:translator_target_lang = 'ja'
 let g:translator_source_lang = 'auto'
 let g:translator_default_engines = ['google']
+
+" vim-brightest
+let g:brightest#highlight = { "group": "BrightestUnderline" }
+let g:brightest#pattern = '\k\+'
+
+" vim-quickhl
+nmap <Space>h <Plug>(quickhl-manual-this)
+xmap <Space>h <Plug>(quickhl-manual-this)
+nmap <Space>H <Plug>(quickhl-manual-reset)
+
+" vim-signature
+let g:SignatureMap = { 'Leader' : "m", 'PlaceNextMark' : "", 'ToggleMarkAtLine' : "<Space>m", 'PurgeMarksAtLine' : "", 'DeleteMark' : "", 'PurgeMarks' : "", 'PurgeMarkers' : "", 'GotoNextLineAlpha' : "", 'GotoPrevLineAlpha' : "", 'GotoNextSpotAlpha' : "", 'GotoPrevSpotAlpha' : "", 'GotoNextLineByPos' : "", 'GotoPrevLineByPos' : "", 'GotoNextSpotByPos' : "", 'GotoPrevSpotByPos' : "", 'GotoNextMarker' : "", 'GotoPrevMarker' : "", 'GotoNextMarkerAny' : "", 'GotoPrevMarkerAny' : "", 'ListBufferMarks' : "", 'ListBufferMarkers' : "" }
+let g:SignatureIncludeMarks = "abcdefghijklmnopqrstuvwxyz"
