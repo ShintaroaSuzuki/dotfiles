@@ -21,6 +21,7 @@ Plug 'kamykn/spelunker.vim'
 Plug 't9md/vim-quickhl'
 Plug 'osyo-manga/vim-brightest'
 Plug 'kshenoy/vim-signature'
+Plug 'wuelnerdotexe/vim-astro'
 
 if has("nvim")
   Plug 'preservim/nerdtree'
