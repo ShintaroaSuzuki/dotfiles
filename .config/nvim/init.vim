@@ -154,3 +154,9 @@ nmap <Space>H <Plug>(quickhl-manual-reset)
 " vim-signature
 let g:SignatureMap = { 'Leader' : "m", 'PlaceNextMark' : "", 'ToggleMarkAtLine' : "<Space>m", 'PurgeMarksAtLine' : "", 'DeleteMark' : "", 'PurgeMarks' : "", 'PurgeMarkers' : "", 'GotoNextLineAlpha' : "", 'GotoPrevLineAlpha' : "", 'GotoNextSpotAlpha' : "", 'GotoPrevSpotAlpha' : "", 'GotoNextLineByPos' : "", 'GotoPrevLineByPos' : "", 'GotoNextSpotByPos' : "", 'GotoPrevSpotByPos' : "", 'GotoNextMarker' : "", 'GotoPrevMarker' : "", 'GotoNextMarkerAny' : "", 'GotoPrevMarkerAny' : "", 'ListBufferMarks' : "", 'ListBufferMarkers' : "" }
 let g:SignatureIncludeMarks = "abcdefghijklmnopqrstuvwxyz"
+
+" CopyFileName
+command! CopyFileName :call s:CopyFileName()
+function! s:CopyFileName()
+  let @* = expand('%')
+endfunction
