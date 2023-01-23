@@ -3,5 +3,5 @@
 ## コミットメッセージのテンプレート
 
 ```
-$ git config -g commit.template .gitmessage
+$ git config -g commit.template ~/.gitmessage
 ```
