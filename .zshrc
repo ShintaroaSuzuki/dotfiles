@@ -254,6 +254,8 @@ function ide() {
   cd $DIR
   tmux split-window -v
   tmux resize-pane -D 10
+  tmux split-window -v
+  tmux resize-pane -D 5
   tmux select-pane -t 0
   nvim
 }
