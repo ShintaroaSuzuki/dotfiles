@@ -155,8 +155,19 @@ nmap <Space>H <Plug>(quickhl-manual-reset)
 let g:SignatureMap = { 'Leader' : "m", 'PlaceNextMark' : "", 'ToggleMarkAtLine' : "<Space>m", 'PurgeMarksAtLine' : "", 'DeleteMark' : "", 'PurgeMarks' : "", 'PurgeMarkers' : "", 'GotoNextLineAlpha' : "", 'GotoPrevLineAlpha' : "", 'GotoNextSpotAlpha' : "", 'GotoPrevSpotAlpha' : "", 'GotoNextLineByPos' : "", 'GotoPrevLineByPos' : "", 'GotoNextSpotByPos' : "", 'GotoPrevSpotByPos' : "", 'GotoNextMarker' : "", 'GotoPrevMarker' : "", 'GotoNextMarkerAny' : "", 'GotoPrevMarkerAny' : "", 'ListBufferMarks' : "", 'ListBufferMarkers' : "" }
 let g:SignatureIncludeMarks = "abcdefghijklmnopqrstuvwxyz"
 
-" CopyFileName
-command! CopyFileName :call s:CopyFileName()
-function! s:CopyFileName()
+" ファイル、ディレクトリのコピー
+command! CopyRelativeFileName :call s:CopyRelativeFileName()
+function! s:CopyRelativeFileName()
   let @* = expand('%')
 endfunction
+
+command! CopyAbsoluteFileName :call s:CopyAbsoluteFileName()
+function! s:CopyAbsoluteFileName()
+  let @* = expand('%:p')
+endfunction
+
+command! CopyDirName :call s:CopyDirName()
+function! s:CopyDirName()
+  let @* = expand('%:h')
+endfunction
+
