@@ -168,6 +168,6 @@ endfunction
 
 command! CopyDirName :call s:CopyDirName()
 function! s:CopyDirName()
-  let @* = expand('%:h')
+  let @* = expand('%:p:h')
 endfunction
 
