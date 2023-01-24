@@ -12,6 +12,7 @@ brew "goenv"
 brew "lolcat"
 brew "luajit", args: ["HEAD"]
 brew "tree-sitter", args: ["HEAD"]
+brew "marp-cli"
 brew "neovim", args: ["HEAD"]
 brew "nodenv"
 brew "nodenv/nodenv/nodenv-package-rehash"
