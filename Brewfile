@@ -5,9 +5,11 @@ tap "homebrew/core"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
 brew "antigen"
+brew "caarlos0/tap/timer"
 brew "fzf"
 brew "gh"
 brew "goenv"
+brew "lolcat"
 brew "luajit", args: ["HEAD"]
 brew "tree-sitter", args: ["HEAD"]
 brew "neovim", args: ["HEAD"]

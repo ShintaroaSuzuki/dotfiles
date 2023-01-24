@@ -266,6 +266,15 @@ alias git-tree="git ls-tree -r --name-only HEAD | tree --fromfile"
 alias s="tmux copy-mode" # "S"croll
 git config --global alias.delete '!git branch | grep -v "master\|main\|*" | xargs -r git branch -D'
 git config --global alias.tree 'log --graph --all --format="%x09%C(cyan bold)%an%Creset%x09%C(yellow)%h%Creset %C(magenta reverse)%d%Creset %s"'
+# pomodoro
+alias work="echo 'we are working! 🎅' | lolcat \
+    && timer 25m \
+    && osascript -e \
+    'display notification \"Work Timer is up! Take a Break ☺️\" with title \"Pomodoro\" sound name \"Crystal\"'"
+alias rest="echo 'we are taking a break... 🫖' | lolcat \
+    && timer 5m \
+    && osascript -e \
+    'display notification \"Break Timer is up! Get back to work 🤓\" with title \"Pomodoro\" sound name \"Crystal\"'"
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
