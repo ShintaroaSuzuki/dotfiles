@@ -156,18 +156,18 @@ let g:SignatureMap = { 'Leader' : "m", 'PlaceNextMark' : "", 'ToggleMarkAtLine' 
 let g:SignatureIncludeMarks = "abcdefghijklmnopqrstuvwxyz"
 
 " ファイル、ディレクトリのコピー
-command! CopyRelativeFileName :call s:CopyRelativeFileName()
-function! s:CopyRelativeFileName()
+command! CopyRelativePath :call s:CopyRelativePath()
+function! s:CopyRelativePath()
   let @* = expand('%')
 endfunction
 
-command! CopyAbsoluteFileName :call s:CopyAbsoluteFileName()
-function! s:CopyAbsoluteFileName()
+command! CopyAbsolutePath :call s:CopyAbsolutePath()
+function! s:CopyAbsolutePath()
   let @* = expand('%:p')
 endfunction
 
-command! CopyDirName :call s:CopyDirName()
-function! s:CopyDirName()
-  let @* = expand('%:h')
+command! CopyDir :call s:CopyDir()
+function! s:CopyDir()
+  let @* = expand('%:p:h')
 endfunction
 
