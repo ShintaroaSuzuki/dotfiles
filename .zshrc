@@ -253,6 +253,21 @@ function ide() {
 
   cd $DIR
   tmux split-window -v
+  tmux resize-pane -D 15
+  tmux select-pane -t 0
+  nvim
+}
+
+# ポモドーロ用のペーンも用意
+function ide_pomo() {
+  if [ "$#" -eq 0 ]; then
+    DIR="."
+  else
+    DIR=$1
+  fi
+
+  cd $DIR
+  tmux split-window -v
   tmux resize-pane -D 10
   tmux split-window -v
   tmux resize-pane -D 5
