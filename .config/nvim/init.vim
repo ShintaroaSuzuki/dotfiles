@@ -171,3 +171,10 @@ function! s:CopyDir()
   let @* = expand('%:p:h')
 endfunction
 
+" memo
+command! Memo :call s:Memo()
+function! s:Memo()
+    vsplit
+    wincmd w
+    edit ~/.memo.md
+endfunction
