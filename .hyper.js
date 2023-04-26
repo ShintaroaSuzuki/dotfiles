@@ -146,6 +146,8 @@ module.exports = {
     keymaps: {
         // Example
         // 'window:devtools': 'cmd+alt+o',
+        // disable buffer clear shortcut
+        "window:clearBuffer": "",
     },
 };
 //# sourceMappingURL=config-default.js.map
