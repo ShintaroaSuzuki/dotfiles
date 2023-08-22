@@ -22,6 +22,7 @@ Plug 't9md/vim-quickhl'
 Plug 'osyo-manga/vim-brightest'
 Plug 'kshenoy/vim-signature'
 Plug 'wuelnerdotexe/vim-astro'
+Plug 'darrikonn/vim-gofmt', { 'do': ':GoUpdateBinaries' }
 
 if has("nvim")
   Plug 'preservim/nerdtree'

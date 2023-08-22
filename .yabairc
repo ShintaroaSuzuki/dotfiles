@@ -31,4 +31,6 @@ yabai -m config left_padding                 06
 yabai -m config right_padding                06
 yabai -m config window_gap                   06
 
+yabai -m config active_window_border_topmost on
+
 echo "yabai configuration loaded.."

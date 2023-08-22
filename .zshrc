@@ -13,18 +13,20 @@ fi
 eval $(/opt/homebrew/bin/brew shellenv)
 
 #--------------------------
+# 1password cli config
+#--------------------------
+source ~/.config/op/plugins.sh
+
+#--------------------------
 # nodenv config
 #--------------------------
 eval "$(nodenv init - --no-rehash)"
 
 #--------------------------
-# goenv config
+# go config
 #--------------------------
-export GOENV_ROOT="$HOME/.goenv"
-export PATH="$GOENV_ROOT/bin:$PATH"
-eval "$(goenv init -)"
-export PATH="$GOROOT/bin:$PATH"
-export PATH="$PATH:$GOPATH/bin"
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 
 #--------------------------
 # pyenv config
@@ -275,6 +277,12 @@ function ide_pomo() {
   tmux select-pane -t 0
   nvim
 }
+
+#--------------------------
+# direnv settings
+#--------------------------
+export EDITOR='nvim'
+eval "$(direnv hook zsh)"
 
 #--------------------------
 # alias settings

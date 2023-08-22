@@ -23,6 +23,9 @@ let g:lsp_settings = {
 \  }
 \}
 
+" enable golangci-lint-langserver
+let g:lsp_settings_filetype_go = ['gopls', 'golangci-lint-langserver']
+
 " init autocmd
 autocmd!
 " set script encoding
@@ -111,10 +114,14 @@ let NERDTreeShowHidden = 1
 
 set exrc
 
-" vim-prettier
 augroup fmt
 autocmd!
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yml,*.html,*.astro PrettierAsync
+" vim-prettier
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yml,*.yaml,*.html,*.astro PrettierAsync
+" vim-gofmt
+autocmd BufWritePre *go GoFmt
+" gci
+autocmd BufWritePre *go execute ':silent !gci write %'
 augroup END
 
 " nvim-lualine
