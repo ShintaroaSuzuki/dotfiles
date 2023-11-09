@@ -236,14 +236,25 @@ function copy-prisma-model() {
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # git 切り替え
+
+source ~/.git_credentials
+
+function delete-url-section-from-gitconfig() {
+  git config --list | grep '^url\.' | awk -F'=' '{print $1}' | while read -r urlKey ; do git config --global --unset "$urlKey"; done
+}
+
 function git-x1() {
+  delete-url-section-from-gitconfig
   git config --global user.name shintaro-x1
   git config --global user.email suzuki.s@x-point-1.net
+  git config --global url.https://shintaro-x1:${GITHUB_TOKEN_X1}@github.com/.insteadOf https://github.com/
 }
 
 function git-private() {
+  delete-url-section-from-gitconfig
   git config --global user.name shintaroasuzuki
   git config --global user.email shinbo.dorapion19971221@gmail.com
+  git config --global url.https://shintaroasuzuki:${GITHUB_TOKEN_PRIVATE}@github.com/.insteadOf https://github.com/
 }
 
 # tmux を ide のように使う
