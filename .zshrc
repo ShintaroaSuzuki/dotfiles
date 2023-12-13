@@ -298,6 +298,7 @@ eval "$(direnv hook zsh)"
 #--------------------------
 # alias settings
 #--------------------------
+alias rm="trash-put"
 alias ls="ls -a"
 alias git-tree="git ls-tree -r --name-only HEAD | tree --fromfile"
 alias s="tmux copy-mode" # "S"croll

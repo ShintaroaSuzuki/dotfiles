@@ -24,6 +24,7 @@ brew "libpq"
 brew "libzip"
 brew "oniguruma"
 brew "tidy-html5"
+brew "trash-cli"
 brew "php"
 brew "composer"
 brew "docker", link: false
