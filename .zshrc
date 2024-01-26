@@ -316,3 +316,24 @@ alias rest="echo 'we are taking a break... 🫖' | lolcat \
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+
+# bun completions
+[ -s "/Users/shintaro/.bun/_bun" ] && source "/Users/shintaro/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# GitHub CLI
+alias gh="env -u GITHUB_TOKEN gh"
+
+# pnpm
+export PNPM_HOME="/Users/shintaro/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# git message template
+git config --global commit.template ~/.gitmessage
