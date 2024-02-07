@@ -46,6 +46,12 @@ export ANDROID_SDK_ROOT=$(brew --prefix)/share/android-commandlinetools
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 
+
+#--------------------------
+# enable zoxide
+#--------------------------
+eval "$(zoxide init zsh)"
+
 #--------------------------
 # zsh Configuration
 #--------------------------
