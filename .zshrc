@@ -320,9 +320,6 @@ alias rest="echo 'we are taking a break... 🫖' | lolcat \
     && osascript -e \
     'display notification \"Break Timer is up! Get back to work 🤓\" with title \"Pomodoro\" sound name \"Crystal\"'"
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
-
 # bun completions
 [ -s "/Users/shintaro/.bun/_bun" ] && source "/Users/shintaro/.bun/_bun"
 
@@ -343,3 +340,6 @@ esac
 
 # git message template
 git config --global commit.template ~/.gitmessage
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
