@@ -295,6 +295,24 @@ function ide_pomo() {
   nvim
 }
 
+# tmux popup
+function tmuxpopup {
+
+  # 変数の設定方法をzshの形式に変更
+  local width='80%'
+  local height='80%'
+
+  # tmuxセッション名の取得
+  local session=$(tmux display-message -p -F "#{session_name}")
+
+  # if文の条件式をzshの形式に変更
+  if [[ $session == *popup* ]]; then
+    tmux detach-client
+  else
+    tmux popup -d '#{pane_current_path}' -xC -yC -w$width -h$height -E "tmux attach -t popup || tmux new -s popup"
+  fi
+}
+
 #--------------------------
 # direnv settings
 #--------------------------
