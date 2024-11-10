@@ -147,7 +147,7 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 
 # https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
 antigen bundle zsh-users/zsh-autosuggestions
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#333333,bg=transparent,bold,underline'
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999,bg=transparent,bold,underline'
 
 antigen apply
 
@@ -361,3 +361,8 @@ git config --global commit.template ~/.gitmessage
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+
+# settings api key for nvim
+set -a
+source ~/.config/nvim/.env
+set +a

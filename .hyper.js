@@ -5,7 +5,7 @@
 
 const colorSchemes = {
   black: "#333333",
-  red: "#3c4665",
+  red: "#bf4d80",
   green: "#287373",
   yellow: "#7c7c99",
   blue: "#395573",
@@ -28,7 +28,7 @@ module.exports = {
     // or `'canary'` for less polished but more frequent updates
     updateChannel: "stable",
     // default font size in pixels for all tabs
-    fontSize: 12,
+    fontSize: 9,
     // font family with optional fallbacks
     fontFamily: '"0xProto", "MesloLGS NF", "ヒラギノ角ゴシック"',
     // default font weight: 'normal' or 'bold'
@@ -51,7 +51,7 @@ module.exports = {
     foregroundColor: "#fff",
     // terminal background color
     // opacity is only supported on macOS
-    backgroundColor: "#000",
+    backgroundColor: "#2b3e4f",
     // terminal selection color
     selectionColor: "rgba(248,28,229,0.3)",
     // border color (window, tabs)
@@ -142,7 +142,7 @@ module.exports = {
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
   // to load it and avoid it being `npm install`ed
-  localPlugins: ["background-blur"],
+  //localPlugins: ["background-blur"],
   keymaps: {
     // Example
     // 'window:devtools': 'cmd+alt+o',
