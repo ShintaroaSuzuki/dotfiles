@@ -45,6 +45,10 @@ cd -
 # python build dependencies
 sudo yum install gcc make patch zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel libffi-devel xz-devel
 
+# install python
+pyenv install 3.10
+pyenv global 3.10
+
 # install jenv
 git clone https://github.com/jenv/jenv.git ~/.jenv
 
