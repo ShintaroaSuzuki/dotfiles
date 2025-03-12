@@ -37,11 +37,31 @@ return {
     "psf/black",
     branch = "stable",
     ft = "python",
+    -- config = function()
+    --   vim.api.nvim_create_autocmd("BufWritePost", {
+    --     pattern = "*.py",
+    --     callback = function()
+    --         vim.cmd("silent !uvx black --quiet %")            
+    --         vim.cmd("edit")
+    --     end,
+    --   })
+    -- end,
     config = function()
       vim.api.nvim_create_autocmd("BufWritePre", {
         pattern = "*.py",
         callback = function()
-          vim.cmd("Black")
+          local buf = vim.api.nvim_get_current_buf()
+          local filename = vim.api.nvim_buf_get_name(buf)
+          local lines = vim.api.nvim_buf_get_lines(buf, 0, -1, false)
+          local content = table.concat(lines, "\n")
+          
+          local formatted = vim.fn.system("uvx black --quiet -", content)
+          
+          if vim.v.shell_error == 0 then
+            vim.api.nvim_buf_set_lines(buf, 0, -1, false, vim.split(formatted, "\n"))
+          else
+            vim.notify("Black formatting failed", vim.log.levels.WARN)
+          end
         end,
       })
     end,

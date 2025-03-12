@@ -1,5 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -10,16 +8,24 @@ fi
 #--------------------------
 # hammerspoon config
 #--------------------------
-eval $(/opt/homebrew/bin/brew shellenv)
+if [[ "$(uname)" == "Darwin" ]]; then
+  eval $(/opt/homebrew/bin/brew shellenv)
+fi
 
 #--------------------------
 # 1password cli config
 #--------------------------
-source ~/.config/op/plugins.sh
+if [[ -f ~/.config/op/plugins.sh ]]; then
+  source ~/.config/op/plugins.sh
+fi
 
 #--------------------------
 # nodenv config
 #--------------------------
+
+if [[ "$(uname)" == "Linux" ]]; then
+  export PATH="$HOME/.nodenv/bin:$PATH"
+fi
 eval "$(nodenv init - --no-rehash)"
 
 #--------------------------
@@ -31,13 +37,21 @@ export PATH=$PATH:$GOPATH/bin
 #--------------------------
 # pyenv config
 #--------------------------
+if [[ "$(uname)" == "Linux" ]]; then
+  export PYENV_ROOT="$HOME/.pyenv"
+  if [[ -d $PYENV_ROOT/bin ]]; then
+    export PATH="$PYENV_ROOT/bin:$PATH"
+  fi
+fi
 eval "$(pyenv init --path)"
 
 
 #--------------------------
 # androidsdk config
 #--------------------------
-export ANDROID_SDK_ROOT=$(brew --prefix)/share/android-commandlinetools
+if [[ "$(uname)" == "Darwin" ]]; then
+  export ANDROID_SDK_ROOT=$(brew --prefix)/share/android-commandlinetools
+fi
 
 
 #--------------------------
@@ -45,6 +59,11 @@ export ANDROID_SDK_ROOT=$(brew --prefix)/share/android-commandlinetools
 #--------------------------
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
+
+#--------------------------
+# cargo config
+#--------------------------
+source $HOME/.cargo/env
 
 
 #--------------------------
@@ -129,7 +148,11 @@ zstyle ':completion:*:default' menu select=2
 zstyle ':completion:*:descriptions' format '%F{yellow}-- %d --%f'
 zstyle ':completion:*:options' description 'yes'
 
-eval $(gdircolors)
+if [[ "$(uname)" == "Darwin" ]]; then
+  eval $(gdircolors)
+else
+  eval $(dircolors)
+fi
 
 zstyle ':completion:*' list-colors $LS_COLORS
 zstyle ':completion:*' group-name ''
@@ -140,7 +163,11 @@ export WORDCHARS="*?_-.[]~=&;!#$%^(){}<>"
 #--------------------------
 # antigen config
 #--------------------------
-source /opt/homebrew/share/antigen/antigen.zsh
+if [[ "$(uname)" == "Darwin" ]]; then
+  source /opt/homebrew/share/antigen/antigen.zsh
+else 
+  source ~/.antigen/antigen.zsh
+fi
 
 # https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
 antigen bundle zsh-users/zsh-syntax-highlighting
@@ -263,6 +290,10 @@ function git-private() {
   git config --global url.https://shintaroasuzuki:${GITHUB_TOKEN_PRIVATE}@github.com/.insteadOf https://github.com/
 }
 
+
+
+
+
 # tmux を ide のように使う
 function ide() {
   if [ "$#" -eq 0 ]; then
@@ -273,9 +304,12 @@ function ide() {
 
   cd $DIR
   tmux split-window -v
-  tmux resize-pane -D 15
+  tmux resize-pane -D 10
   tmux select-pane -t 0
-  nvim
+  tmux send-keys 'nvim' C-m 
+  sleep 0.2
+  tmux select-pane -t 1
+  tmux send-keys 'claude' C-m
 }
 
 # ポモドーロ用のペーンも用意
@@ -359,10 +393,11 @@ esac
 # git message template
 git config --global commit.template ~/.gitmessage
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
-
 # settings api key for nvim
 set -a
 source ~/.config/nvim/.env
 set +a
+
+# uv shell completion
+eval "$(uv generate-shell-completion zsh)"
+eval "$(uvx --generate-shell-completion zsh)"

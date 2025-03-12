@@ -1,0 +1,74 @@
+sudo yum install zsh util-linux-user git gcc gcc-c++ make cmake tmux -y
+
+# git clone https://github.com/shintaroasuzuki/dotfiles
+
+# change shell
+sudo chsh -s /bin/zsh ec2-user
+
+# install neovim
+cd ~
+
+git clone https://github.com/neovim/neovim
+
+cd neovim
+
+make CMAKE_BUILD_TYPE=RelWithDebInfo
+
+sudo make install
+
+cd -
+
+# install nodenv
+git clone https://github.com/nodenv/nodenv.git ~/.nodenv
+
+cd ~/.nodenv && src/configure && make -C src
+
+~/.nodenv/bin/nodenv init
+
+mkdir plugins
+
+cd plugins
+
+git clone https://github.com/nodenv/node-build.git
+
+cd ~
+
+# install pyenv
+git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+
+cd ~/.pyenv && src/configure && make -C src
+
+cd -
+
+# install jenv
+git clone https://github.com/jenv/jenv.git ~/.jenv
+
+# install rust
+curl https://sh.rustup.rs -sSf | sh
+source $HOME/.cargo/env
+
+# install zoxide
+cargo install zoxide --locked
+
+# install antigen
+mkdir -p ~/.antigen
+curl -L git.io/antigen > ~/.antigen/antigen.zsh
+
+# symlink
+cd dotfiles
+
+CURRENT_DIR=$(pwd)
+
+ln -sfn $CURRENT_DIR/.gitmessage ~/.gitmessage
+
+mkdir -p ~/.config/nvim
+
+sudo rm -rf ~/.config/nvim
+
+ln -sfn $CURRENT_DIR/.config/nvim ~/.config/nvim
+
+ln -sfn $CURRENT_DIR/.zshrc ~/.zshrc
+
+source ~/.zshrc
+
+cd -

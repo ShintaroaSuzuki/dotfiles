@@ -31,9 +31,7 @@ return {
     },
     -- providers-setting
     claude = {
-        model = "claude-3-5-sonnet-20240620", -- $3/$15, maxtokens=8000
-        -- model = "claude-3-opus-20240229",  -- $15/$75
-        -- model = "claude-3-haiku-20240307", -- $0.25/1.25
+        model = "claude-3-7-sonnet-latest",
         max_tokens = 8000,
     },
     copilot = {
@@ -56,7 +54,7 @@ return {
     "nvim-lua/plenary.nvim",
     "MunifTanjim/nui.nvim",
     --- The below dependencies are optional,
-    "echasnovski/mini.icons", -- or nvim-tree/nvim-web-devicons
+    "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
     "zbirenbaum/copilot.lua", -- for providers='copilot'
     {
       -- support for image pasting

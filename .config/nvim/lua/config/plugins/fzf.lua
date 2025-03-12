@@ -1,7 +1,7 @@
 return {
   {
     "junegunn/fzf",
-    build = "fzf#install()"
+    build = ":call fzf#install()"
   },
   {
     "junegunn/fzf.vim",
