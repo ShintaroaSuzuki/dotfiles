@@ -1,5 +1,4 @@
 sudo yum install zsh util-linux-user git gcc gcc-c++ make cmake tmux -y
-
 # git clone https://github.com/shintaroasuzuki/dotfiles
 
 # change shell
@@ -39,6 +38,9 @@ git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 cd ~/.pyenv && src/configure && make -C src
 
 cd -
+
+# python build dependencies
+sudo yum install gcc make patch zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel libffi-devel xz-devel
 
 # install jenv
 git clone https://github.com/jenv/jenv.git ~/.jenv
