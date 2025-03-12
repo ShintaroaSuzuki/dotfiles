@@ -35,6 +35,10 @@ git clone https://github.com/nodenv/node-build.git
 
 cd ~
 
+# install node
+nodenv install 20.14.0
+nodenv global 20.14.0
+
 # install pyenv
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 
@@ -86,3 +90,7 @@ cd -
 # reload
 
 source ~/.zshrc
+
+# install claude code
+npm install -g @anthropic-ai/claude-code
+nodenv rehash
