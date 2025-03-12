@@ -2,6 +2,9 @@ sudo yum install zsh util-linux-user git gcc gcc-c++ make cmake tmux -y
 
 # git clone https://github.com/shintaroasuzuki/dotfiles
 
+# git config
+cp dotfiles/.git_credentials.sample ~/.git_credentials
+
 # change shell
 sudo chsh -s /bin/zsh ec2-user
 
@@ -69,6 +72,8 @@ ln -sfn $CURRENT_DIR/.config/nvim ~/.config/nvim
 
 ln -sfn $CURRENT_DIR/.zshrc ~/.zshrc
 
-source ~/.zshrc
-
 cd -
+
+# reload
+
+source ~/.zshrc
