@@ -70,6 +70,13 @@ cargo install zoxide --locked
 mkdir -p ~/.antigen
 curl -L git.io/antigen > ~/.antigen/antigen.zsh
 
+# install ripgrep
+cargo install ripgrep
+
+# install fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
 # symlink
 cd dotfiles
 
