@@ -49,6 +49,9 @@ sudo yum install gcc make patch zlib-devel bzip2 bzip2-devel readline-devel sqli
 pyenv install 3.10
 pyenv global 3.10
 
+# install uv
+pip install uv
+
 # install jenv
 git clone https://github.com/jenv/jenv.git ~/.jenv
 
