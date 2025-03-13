@@ -26,7 +26,7 @@ fi
 if [[ "$(uname)" == "Linux" ]]; then
   export PATH="$HOME/.nodenv/bin:$PATH"
 fi
-eval "$(nodenv init - --no-rehash)"
+evol "$(nodenv init - --no-rehash)"
 
 #--------------------------
 # go config
@@ -362,6 +362,11 @@ alias git-tree="git ls-tree -r --name-only HEAD | tree --fromfile"
 alias s="tmux copy-mode" # "S"croll
 git config --global alias.delete '!git branch | grep -v "master\|main\|*" | xargs -r git branch -D'
 git config --global alias.tree 'log --graph --all --format="%x09%C(cyan bold)%an%Creset%x09%C(yellow)%h%Creset %C(magenta reverse)%d%Creset %s"'
+
+if [[ "$(uname)" == "Linux" ]]; then
+  alias pbcopy="xsel --clipboard --input"
+fi
+
 # pomodoro
 alias work="echo 'we are working! 🎅' | lolcat \
     && timer 25m \
@@ -400,4 +405,4 @@ set +a
 
 # uv shell completion
 eval "$(uv generate-shell-completion zsh)"
-eval "$(uvx --generate-shell-completion zsh)"
+eval "$(uvx --generate-shell-completion zsh)
