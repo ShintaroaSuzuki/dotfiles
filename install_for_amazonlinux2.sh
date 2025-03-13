@@ -77,6 +77,13 @@ cargo install ripgrep
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
+# docker config
+sudo systemctl start docker
+sudo gpasswd -a $(whoami) docker
+sudo chgrp docker /var/run/docker.sock
+sudo service docker restart
+sudo systemctl enable docker
+
 # install docker-compose
 sudo mkdir -p /usr/local/lib/docker/cli-plugins
 cd /usr/local/lib/docker/cli-plugins
@@ -108,3 +115,5 @@ source ~/.zshrc
 # install claude code
 npm install -g @anthropic-ai/claude-code
 nodenv rehash
+
+echo "Please restart your shell"
