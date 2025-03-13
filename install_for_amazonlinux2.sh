@@ -1,4 +1,4 @@
-sudo yum install zsh util-linux-user git gcc gcc-c++ make cmake tmux -y
+sudo yum install zsh util-linux-user git gcc gcc-c++ make cmake tmux docker -y
 # git clone https://github.com/shintaroasuzuki/dotfiles
 
 # git config
