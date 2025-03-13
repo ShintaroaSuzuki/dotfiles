@@ -77,6 +77,13 @@ cargo install ripgrep
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
+# install docker-compose
+sudo mkdir -p /usr/local/lib/docker/cli-plugins
+cd /usr/local/lib/docker/cli-plugins
+sudo curl -OL https://github.com/docker/compose/releases/download/v2.33.1/docker-compose-linux-x86_64
+sudo mv docker-compose-linux-x86_64 docker-compose
+sudo chmod +x docker-compose 
+
 # symlink
 cd dotfiles
 
