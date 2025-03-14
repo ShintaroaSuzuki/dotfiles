@@ -39,6 +39,9 @@ cd ~
 nodenv install 20.14.0
 nodenv global 20.14.0
 
+# install pnpm
+npm install -g pnpm
+
 # install pyenv
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 
