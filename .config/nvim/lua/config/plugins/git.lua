@@ -1,4 +1,4 @@
 return {
-  { 'vim-fugitive' },
-  { 'vim-rhubarb' },
+  { 'tpope/vim-fugitive' },
+  { 'tpope/vim-rhubarb' },
 }

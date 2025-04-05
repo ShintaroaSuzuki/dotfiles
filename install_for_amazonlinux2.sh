@@ -39,6 +39,9 @@ cd ~
 nodenv install 20.14.0
 nodenv global 20.14.0
 
+# install pnpm
+npm install -g pnpm
+
 # install pyenv
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 
@@ -90,6 +93,11 @@ cd /usr/local/lib/docker/cli-plugins
 sudo curl -OL https://github.com/docker/compose/releases/download/v2.33.1/docker-compose-linux-x86_64
 sudo mv docker-compose-linux-x86_64 docker-compose
 sudo chmod +x docker-compose 
+
+# install github cli
+type -p yum-config-manager >/dev/null || sudo yum install yum-utils
+sudo yum-config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
+sudo yum install gh
 
 # symlink
 cd dotfiles
