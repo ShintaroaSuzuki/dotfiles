@@ -30,7 +30,8 @@ module.exports = {
     // default font size in pixels for all tabs
     fontSize: 9,
     // font family with optional fallbacks
-    fontFamily: '"0xProto", "MesloLGS NF", "ヒラギノ角ゴシック"',
+    fontFamily:
+      '"0xProto", "MesloLGS NF", "Hack Nerd Font", "ヒラギノ角ゴシック"',
     // default font weight: 'normal' or 'bold'
     fontWeight: "normal",
     // font weight for bold characters: 'normal' or 'bold'
