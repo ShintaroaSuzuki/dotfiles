@@ -7,6 +7,11 @@ cp dotfiles/.git_credentials.sample ~/.git_credentials
 # change shell
 sudo chsh -s /bin/zsh ec2-user
 
+# install icons
+mkdir -p ~/.local/share/fonts
+cd ~/.local/share/fonts && curl -fLO https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/DroidSansMono/DroidSansMNerdFont-Regular.otf
+cd -
+
 # install neovim
 cd ~
 
