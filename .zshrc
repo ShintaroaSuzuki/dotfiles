@@ -219,8 +219,18 @@ function venv() {
       ;;
   esac
 }
+#
+# env
+set -a
+source ~/.env
+set +a
 
-# Nest.jsへのtailwindcssの導入の自動化
+# --------------------------
+# codex settings
+# --------------------------
+alias codex="codex --full-auto"
+
+# Next.jsへのtailwindcssの導入の自動化
 function next-tailwind() {
   if [ $# != 1 ]; then
     echo "invalid auguments"
@@ -291,9 +301,6 @@ function git-private() {
 }
 
 
-
-
-
 # tmux を ide のように使う
 function ide() {
   if [ "$#" -eq 0 ]; then
@@ -307,9 +314,9 @@ function ide() {
   tmux resize-pane -D 10
   tmux select-pane -t 0
   tmux send-keys 'nvim' C-m 
-  sleep 0.2
-  tmux select-pane -t 1
-  tmux send-keys 'claude' C-m
+  # sleep 0.2
+  # tmux select-pane -t 1
+  # tmux send-keys 'codex' C-m
 }
 
 # ポモドーロ用のペーンも用意
