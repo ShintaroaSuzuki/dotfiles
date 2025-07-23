@@ -176,6 +176,9 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999,bg=transparent,bold,underline'
 
+# https://github.com/choplin/cclog
+antigen bundle choplin/cclog@main
+
 antigen apply
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
