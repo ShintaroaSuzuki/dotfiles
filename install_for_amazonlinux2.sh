@@ -116,12 +116,12 @@ ln -sfn $CURRENT_DIR/.zshrc ~/.zshrc
 
 cd -
 
-# reload
+# install claude code
+curl -fsSL https://claude.ai/install.sh | bash -s latest
 
+# reload
 source ~/.zshrc
 
-# install claude code
-npm install -g @anthropic-ai/claude-code
-nodenv rehash
 
 echo "Please restart your shell"
+
