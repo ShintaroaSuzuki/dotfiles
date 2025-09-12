@@ -2,5 +2,5 @@
 
 ```bash
 git init
-uvx --from git+https://github.com/github/spec-kit.git specify init --here
+echo "y" | uvx --from git+https://github.com/github/spec-kit.git specify init --here --ai claude
 ```
