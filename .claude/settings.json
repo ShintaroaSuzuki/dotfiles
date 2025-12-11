@@ -1,8 +1,4 @@
 {
-  "statusLine": {
-    "type": "command",
-    "command": "bunx ccusage statusline"
-  },
   "hooks": {
     "Stop": [
       {
@@ -26,5 +22,16 @@
         ]
       }
     ]
-  }
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "bunx ccusage statusline"
+  },
+  "enabledPlugins": {
+    "frontend-design@shintaroazusuki-plugins": true,
+    "frontend-design@claude-code-plugins": true,
+    "commit-commands@shintaroazusuki-plugins": true,
+    "ux_concepts@shintaroazusuki-plugins": true
+  },
+  "alwaysThinkingEnabled": false
 }

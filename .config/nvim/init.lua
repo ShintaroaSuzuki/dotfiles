@@ -5,4 +5,3 @@ require("config.find")
 require("config.maps")
 require("config.memo")
 require("config.lazy")
-

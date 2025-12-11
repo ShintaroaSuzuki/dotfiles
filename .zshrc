@@ -169,9 +169,6 @@ else
   source ~/.antigen/antigen.zsh
 fi
 
-# https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
-antigen bundle zsh-users/zsh-syntax-highlighting
-
 # https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
 antigen bundle zsh-users/zsh-autosuggestions
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999,bg=transparent,bold,underline'
@@ -180,6 +177,51 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999,bg=transparent,bold,underline'
 antigen bundle choplin/cclog@main
 
 antigen apply
+
+#--------------------------
+# sheldon config
+#--------------------------
+eval "$(sheldon source)"
+
+#--------------------------
+# zeno.zsh config
+#--------------------------
+export ZENO_HOME=~/.config/zeno
+
+# git file preview with color
+export ZENO_GIT_CAT="bat --color=always"
+
+# git folder preview with color
+# export ZENO_GIT_TREE="eza --tree"
+
+if [[ -n $ZENO_LOADED ]]; then
+  bindkey ' '  zeno-auto-snippet
+
+  # if you use zsh's incremental search
+  # bindkey -M isearch ' ' self-insert
+
+  bindkey '^m' zeno-auto-snippet-and-accept-line
+
+  bindkey '^i' zeno-completion
+
+  bindkey '^xx' zeno-insert-snippet           # open snippet picker (fzf) and insert at cursor
+
+  bindkey '^x '  zeno-insert-space
+  bindkey '^x^m' accept-line
+  bindkey '^x^z' zeno-toggle-auto-snippet
+
+  # preprompt bindings
+  bindkey '^xp' zeno-preprompt
+  bindkey '^xs' zeno-preprompt-snippet
+  # Outside ZLE you can run `zeno-preprompt git {{cmd}}` or `zeno-preprompt-snippet foo`
+  # to set the next prompt prefix; invoking them with an empty argument resets the state.
+
+  bindkey '^r' zeno-smart-history-selection # smart history widget
+
+  # fallback if completion not matched
+  # (default: fzf-completion if exists; otherwise expand-or-complete)
+  # export ZENO_COMPLETION_FALLBACK=expand-or-complete
+fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -411,3 +453,81 @@ eval "$(uvx --generate-shell-completion zsh)"
 
 # claude code native install
 export PATH="$HOME/.local/bin:$PATH"
+
+#--------------------------
+# nb
+#--------------------------
+# nb add article - Add a note with article title and URL
+# Usage: nba <url>              - Auto-fetch title from URL
+#        nba <title> <url>      - Use specified title
+function nba() {
+  if [ $# -lt 1 ]; then
+    echo "Usage: nba <url>           # Auto-fetch title"
+    echo "       nba <title> <url>   # Manual title"
+    return 1
+  fi
+
+  local title=""
+  local url=""
+
+  if [ $# -eq 1 ]; then
+    url="$1"
+    echo "Fetching title from: $url"
+
+    title=$(curl -sL --max-redirs 3 --max-time 5 --compressed "$url" | head -c 512 | perl -0777 -ne 'print $1 if /<title[^>]*>([^<]+)<\/title>/i')
+    title=$(echo "$title" | perl -pe 's/^\s+|\s+$//g; s/\s+/ /g')
+
+    if [ -z "$title" ]; then
+      echo "Error: Could not fetch title from URL"
+      return 1
+    fi
+    echo "Title: $title"
+  else
+    title="$1"
+    url="$2"
+  fi
+
+  local content="# ${title}
+
+参照: [${title}](${url})"
+
+  nb add --filename "${title}.md" --content "$content"
+  echo "Note created: [${title}](${url})"
+}
+# nb query - Search notes and select with fzf preview
+# Usage: nbq <search query>
+function nbq() {
+  if [ -z "$1" ]; then
+    echo "Usage: nbq <search query>"
+    return 1
+  fi
+
+  local query="$*"
+  local results=$(nb q "$query" --no-color 2>/dev/null | grep -E '^\[[0-9]+\]')
+
+  if [ -z "$results" ]; then
+    echo "No results found for: $query"
+    return 1
+  fi
+
+  export _NBQ_QUERY="$query"
+
+  local selected=$(echo "$results" | fzf --ansi \
+    --preview 'note_id=$(echo {} | sed -E "s/^\[([0-9]+)\].*/\1/")
+               echo "=== Note [$note_id] ==="
+               echo ""
+               nb show "$note_id" | head -5
+               echo ""
+               echo "=== Matching lines ==="
+               echo ""
+               nb show "$note_id" | grep -i --color=always -C 2 "$_NBQ_QUERY" | head -30' \
+    --preview-window=right:60%:wrap \
+    --header "Search: $query")
+
+  unset _NBQ_QUERY
+
+  if [ -n "$selected" ]; then
+    local note_id=$(echo "$selected" | sed -E 's/^\[([0-9]+)\].*/\1/')
+    nb edit "$note_id"
+  fi
+}

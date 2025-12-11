@@ -74,5 +74,9 @@ token_count_estimator: TIKTOKEN_GPT4O
 # NOTE: Make sure there are no name collisions in the names of registered projects.
 projects:
 - /Users/shintaro/Documents/Projects/genkaya-ec
+- /Users/shintaro/Documents/Projects/haruyoshi-clone
+- /Users/shintaro/Documents/Projects/keigo
 - /Users/shintaro/documents/projects/genkaya-ec
+- /Users/shintaro/documents/projects/haruyoshi-clone
+- /Users/shintaro/documents/projects/infinite-claude-code
 - /Users/shintaro/documents/projects/keigo

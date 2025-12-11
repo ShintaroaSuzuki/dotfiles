@@ -50,15 +50,15 @@ return {
     vim.g.NERDTreeShowHidden = 1
 
     -- key mapping for nerdtree
-    vim.keymap.set('n', '<leader>n', ':NERDTreeFocus<CR>', { silent = true })
+    vim.keymap.set('n', '<leader>nt', ':NERDTreeFocus<CR>', { silent = true })
     vim.keymap.set('n', '<C-n>', ':NERDTree<CR>', { silent = true })
     vim.keymap.set('n', '<C-t>', ':NERDTreeToggle<CR>', { silent = true })
     vim.keymap.set('n', '<C-f>', ':NERDTreeFind<CR>', { silent = true })
 
-    -- key mapping for tab
-    vim.keymap.set('n', 'te', ':tabedit ', { silent = false })
-    vim.keymap.set('n', '<S-Tab>', ':tabprev<CR>', { silent = true })
-    vim.keymap.set('n', '<Tab>', ':tabnext<CR>', { silent = true })
+    -- key mapping for tab (disabled: using bufferline.nvim)
+    -- vim.keymap.set('n', 'te', ':tabedit ', { silent = false })
+    -- vim.keymap.set('n', '<S-Tab>', ':tabprev<CR>', { silent = true })
+    -- vim.keymap.set('n', '<Tab>', ':tabnext<CR>', { silent = true })
   end,
   dependencies = {
     'ryanoasis/vim-devicons',
