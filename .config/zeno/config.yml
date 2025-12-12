@@ -16,3 +16,19 @@ completions:
     sourceCommand: nb subcommands
     options:
       --prompt: "'nb subcommand >'"
+snippets:
+  - name: Edit Note
+    keyword: nbe
+    snippet: nb edit
+
+  - name: List Note
+    keyword: nbl
+    snippet: nb ls --limit 20
+
+  - name: List All Note
+    keyword: nbla
+    snippet: nb ls --all
+
+  - name: nb search
+    keyword: nbg
+    snippet: rg "{{keyword}}" "$(nb notebooks current --path)"

@@ -12,7 +12,13 @@
 
 shell = "zsh"
 
+[templates]
+defer = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}{{ hooks?.post | nl }}"
+
 [plugins]
+# zsh-defer is required for defer template
+[plugins.zsh-defer]
+github = "romkatv/zsh-defer"
 
 # For example:
 #
@@ -20,5 +26,23 @@ shell = "zsh"
 # [plugins]
 [plugins.zeno]
 github = "yuki-yano/zeno.zsh"
+
+[plugins.zeno.hooks]
+pre = '''
+export ZENO_HOME=~/.config/zeno
+export ZENO_GIT_CAT="bat --color=always"
+'''
+post = '''
+bindkey ' ' zeno-auto-snippet
+bindkey '^m' zeno-auto-snippet-and-accept-line
+bindkey '^i' zeno-completion
+bindkey '^xx' zeno-insert-snippet
+bindkey '^x ' zeno-insert-space
+bindkey '^x^m' accept-line
+bindkey '^x^z' zeno-toggle-auto-snippet
+bindkey '^xp' zeno-preprompt
+bindkey '^xs' zeno-preprompt-snippet
+bindkey '^r' zeno-smart-history-selection
+'''
 [plugins.fast-syntax-highlighting]
 github = "zdharma-continuum/fast-syntax-highlighting"
