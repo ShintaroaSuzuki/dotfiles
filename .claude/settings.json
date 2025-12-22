@@ -32,6 +32,7 @@
     "frontend-design@claude-code-plugins": true,
     "commit-commands@shintaroazusuki-plugins": true,
     "ux_concepts@shintaroazusuki-plugins": true,
-    "elevator-music@sevii-agent-marketplace": true
+    "elevator-music@sevii-agent-marketplace": true,
+    "typescript-lsp@claude-plugins-official": true
   }
 }

@@ -43,6 +43,7 @@ bindkey '^x^z' zeno-toggle-auto-snippet
 bindkey '^xp' zeno-preprompt
 bindkey '^xs' zeno-preprompt-snippet
 bindkey '^r' zeno-smart-history-selection
+bindkey '^g' zeno-ghq-cd
 '''
 [plugins.fast-syntax-highlighting]
 github = "zdharma-continuum/fast-syntax-highlighting"
