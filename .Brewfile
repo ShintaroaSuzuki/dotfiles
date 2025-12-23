@@ -53,6 +53,7 @@ brew "neovim", args: ["HEAD"]
 brew "nodenv"
 brew "openjdk@11"
 brew "openssl@3"
+brew "ollama"
 brew "pandoc"
 brew "postgresql"
 brew "pyenv"
