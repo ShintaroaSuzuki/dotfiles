@@ -288,13 +288,15 @@ function git-x1() {
   git config --global user.name shintaro-x1
   git config --global user.email suzuki.s@x-point-1.net
   git config --global url.https://shintaro-x1:${GITHUB_TOKEN_X1}@github.com/.insteadOf https://github.com/
+  git config --global ghq.user shintaro-x1
 }
 
 function git-private() {
   delete-url-section-from-gitconfig
-  git config --global user.name shintaroasuzuki
+  git config --global user.name ShintaroaSuzuki
   git config --global user.email shinbo.dorapion19971221@gmail.com
   git config --global url.https://shintaroasuzuki:${GITHUB_TOKEN_PRIVATE}@github.com/.insteadOf https://github.com/
+  git config --global ghq.user ShintaroaSuzuki
 }
 
 
