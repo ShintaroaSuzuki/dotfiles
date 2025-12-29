@@ -16,7 +16,7 @@
 !/.yabairc
 !/.skhdrc
 !/.hammerspoon/init.lua
-!/.git_credentials.sample
+!/.git_credentials.example
 !/.install_for_amazonlinux2.sh
 !/.claude/settings.json
 !/.claude/commands

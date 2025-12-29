@@ -204,75 +204,6 @@ if [ -f '/Users/shintaro/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/shinta
 if [ -f '/Users/shintaro/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/shintaro/google-cloud-sdk/completion.zsh.inc'; fi
 
 
-# Pythonの仮想環境の操作を簡単にする
-function venv() {
-  case $1 in
-    init)
-      local CMD='python3 -m venv .venv'
-      echo $CMD
-      eval $CMD
-      ;;
-    activate)
-      if [ ! -d "./.venv" ]; then
-        echo '.venv not found. run `venv init`.'
-        return 1
-      fi
-      local CMD='source .venv/bin/activate'
-      echo $CMD
-      eval $CMD
-      ;;
-    *)
-      venv activate
-      ;;
-  esac
-}
-
-# Nest.jsへのtailwindcssの導入の自動化
-function next-tailwind() {
-  if [ $# != 1 ]; then
-    echo "invalid auguments"
-    return 1
-  fi
-
-  case $1 in
-    init)
-      if [ ! -e "./next.config.js" ]; then
-        echo 'this directory is not next.js project'
-        return 1
-      fi
-
-      local CMD
-
-      CMD="yarn add -D tailwindcss postcss autoprefixer"
-      echo $CMD
-      eval $CMD
-
-      CMD="yarn tailwindcss init -p"
-      echo $CMD
-      eval $CMD
-
-      echo "update tailwind.config.js"
-      cp ~/.templates/tailwind.config.js ./tailwind.config.js
-
-      echo "update styles/globals.css"
-      cp ~/.templates/globals.css ./styles/globals.css
-
-      ;;
-    *)
-      echo "not found command: $1"
-      ;;
-  esac
-}
-
-# prisma-nestjs-graphqlでの生成したファイルをプロジェクトのフォルダに移行する
-function copy-prisma-model() {
-  # model.tsの移動
-  echo "make folder"
-  ls src/@generated/prisma-nestjs-graphql/*/*.model.ts | sed 's/src\/\@generated\/prisma-nestjs-graphql\///g' | sed 's/\/.*//g' | xargs -I {} sh -c 'mkdir src/{}'
-  echo "copy model.ts"
-  ls src/@generated/prisma-nestjs-graphql/*/*.model.ts | sed 's/src\/\@generated\/prisma-nestjs-graphql\///g' | xargs -I {} sh -c 'cp src/@generated/prisma-nestjs-graphql/{} src/{}'
-}
-
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # git 切り替え
@@ -298,10 +229,6 @@ function git-private() {
   git config --global url.https://shintaroasuzuki:${GITHUB_TOKEN_PRIVATE}@github.com/.insteadOf https://github.com/
   git config --global ghq.user ShintaroaSuzuki
 }
-
-
-
-
 
 # tmux を ide のように使う
 function ide() {
@@ -373,7 +300,6 @@ alias git-tree="git ls-tree -r --name-only HEAD | tree --fromfile"
 alias s="tmux copy-mode" # "S"croll
 git config --global alias.delete '!git branch | grep -v "master\|main\|*" | xargs -r git branch -D'
 git config --global alias.tree 'log --graph --all --format="%x09%C(cyan bold)%an%Creset%x09%C(yellow)%h%Creset %C(magenta reverse)%d%Creset %s"'
-ln -s "$(brew --prefix)/bin/claude-squad" "$(brew --prefix)/bin/cs"
 
 # pomodoro
 alias work="echo 'we are working! 🎅' | lolcat \
