@@ -59,6 +59,7 @@ return {
     -- File colors
     vim.api.nvim_set_hl(0, 'NeoTreeFileName', { fg = '#d0e8f0' })        -- 通常ファイル: 薄い青
     vim.api.nvim_set_hl(0, 'NeoTreeGitModified', { fg = '#88c0d0', bold = true })  -- 変更ファイル: はっきりした青
+    vim.api.nvim_set_hl(0, 'NeoTreeGitUntracked', { fg = '#5e81ac' })              -- 未追加ファイル: 青
 
     -- Key mappings (preserving original shortcuts)
     vim.keymap.set('n', '<leader>nt', ':Neotree focus<CR>', { silent = true, desc = 'Focus Neo-tree' })
