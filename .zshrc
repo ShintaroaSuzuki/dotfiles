@@ -231,6 +231,7 @@ function git-private() {
 }
 
 # tmux を ide のように使う
+# 左40%: Claude Code, 右上42%: nvim, 右下18%: ターミナル
 function ide() {
   if [ "$#" -eq 0 ]; then
     DIR="."
@@ -239,13 +240,27 @@ function ide() {
   fi
 
   cd $DIR
-  tmux split-window -v
-  tmux resize-pane -D 10
-  tmux select-pane -t 0
-  tmux send-keys 'nvim' C-m 
-  sleep 0.2
+  # 左右に分割（右側を60%に）
+  tmux split-window -h -p 60
+  # 右ペインを上下に分割（下側を30%に）
+  tmux split-window -v -p 30
+
+  # ペイン構成:
+  # pane 0: 左 - Claude Code
+  # pane 1: 右上 - nvim
+  # pane 2: 右下 - ターミナル
+
+  # 右上ペインで nvim を起動
   tmux select-pane -t 1
-  tmux send-keys 'claude' C-m
+  tmux send-keys 'nvim' C-m
+
+  # 左ペインで claude を起動
+  tmux select-pane -t 0
+  tmux send-keys 'clear && claude' C-m
+
+  # 右下のターミナルペインを選択（作業用）
+  sleep 0.2
+  tmux select-pane -t 2
 }
 
 # ポモドーロ用のペーンも用意

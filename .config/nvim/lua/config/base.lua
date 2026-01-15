@@ -36,3 +36,14 @@ vim.opt.inccommand = 'split'
 
 -- .exrc and .vimrc in the current directory are read
 vim.o.exrc = true
+
+-- open current directory when nvim is started without arguments (same as nvim .)
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    if vim.fn.argc() == 0 then
+      vim.schedule(function()
+        vim.cmd("NERDTree")
+      end)
+    end
+  end,
+})

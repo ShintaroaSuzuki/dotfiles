@@ -32,10 +32,11 @@
     "frontend-design@claude-code-plugins": true,
     "commit-commands@shintaroazusuki-plugins": true,
     "ux_concepts@shintaroazusuki-plugins": true,
-    "elevator-music@sevii-agent-marketplace": true,
+    "elevator-music@sevii-agent-marketplace": false,
     "typescript-lsp@claude-plugins-official": true,
     "frontend-design@claude-plugins-official": true,
     "ux-concepts@shintaroazusuki-plugins": true,
-    "commit-commands@claude-plugins-official": true
+    "commit-commands@claude-plugins-official": true,
+    "example-skills@anthropic-agent-skills": true
   }
 }
