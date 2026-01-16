@@ -125,6 +125,7 @@ $ claude
 > /plugin install frontend-design@shintaroasuzuki-plugins
 > /plugin install ux-concepts@shintaroasuzuki-plugins
 > /plugin install commit-commands@shintaroasuzuki-plugins
+> /plugin install codex-collaborator@shintaroasuzuki-plugins
 ```
 
 ## Copilot の設定

@@ -38,6 +38,7 @@
     "ux-concepts@shintaroazusuki-plugins": true,
     "commit-commands@claude-plugins-official": true,
     "example-skills@anthropic-agent-skills": true,
-    "document-skills@anthropic-agent-skills": true
+    "document-skills@anthropic-agent-skills": true,
+    "codex-collaborator@shintaroazusuki-plugins": true
   }
 }
