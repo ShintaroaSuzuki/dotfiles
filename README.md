@@ -49,8 +49,8 @@ $ cd dotfiles && stow -v -t ~ .
 karabiner-elements を起動し、「Complex Modifications > Add predefined rules > Import more rules from the Internet」をクリックして、「For Japanese （日本語環境向けの設定）」をインポートし、その後、「コマンドキー (左右どちらでも) を単体で押したときに、英数・かなをトグルで切り替える。」を有効化
 
 ## Google 日本語入力の設定
-環境設定から、スペースの入力を「半角」に変更
 
+環境設定から、スペースの入力を「半角」に変更
 
 ## tpm (tmux plugin manager) のインストール
 
@@ -60,7 +60,7 @@ $ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 prefix + I (大文字の I) を実行すると、tmux のプラグインがインストールされる
 
-## git関連の設定
+## git 関連の設定
 
 ### gitconfig の作成
 
@@ -83,6 +83,7 @@ $ git config commit.template ~/.gitmessage -g
 ```
 
 ### GitHub アカウントの切り替えスクリプトの設定
+
 ```
 $ source ~/.git_credentials
 $ git-private
@@ -107,6 +108,7 @@ $ nb remote set https://github.com/ShintaroaSuzuki/nb-<notebook-name>
 ```
 
 ### semsearch プラグインのインストールと設定
+
 ```
 $ cd ~/ghq/github.com/ShintaroaSuzuki/nb
 $ git clone https://github.com/ShintaroaSuzuki/nb-plugins .plugins
