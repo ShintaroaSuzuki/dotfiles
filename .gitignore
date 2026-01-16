@@ -20,4 +20,5 @@
 !/.install_for_amazonlinux2.sh
 !/.claude/settings.json
 !/.claude/commands
+!/.claude/skills
 !/.serena/serena_config.yml
