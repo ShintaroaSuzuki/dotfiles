@@ -358,43 +358,6 @@ export PATH="$HOME/.local/bin:$PATH"
 #--------------------------
 # nb
 #--------------------------
-# nb add article - Add a note with article title and URL
-# Usage: nba <url>              - Auto-fetch title from URL
-#        nba <title> <url>      - Use specified title
-function nba() {
-  if [ $# -lt 1 ]; then
-    echo "Usage: nba <url>           # Auto-fetch title"
-    echo "       nba <title> <url>   # Manual title"
-    return 1
-  fi
-
-  local title=""
-  local url=""
-
-  if [ $# -eq 1 ]; then
-    url="$1"
-    echo "Fetching title from: $url"
-
-    title=$(curl -sL --max-redirs 3 --max-time 5 --compressed "$url" | head -c 512 | perl -0777 -ne 'print $1 if /<title[^>]*>([^<]+)<\/title>/i')
-    title=$(echo "$title" | perl -pe 's/^\s+|\s+$//g; s/\s+/ /g')
-
-    if [ -z "$title" ]; then
-      echo "Error: Could not fetch title from URL"
-      return 1
-    fi
-    echo "Title: $title"
-  else
-    title="$1"
-    url="$2"
-  fi
-
-  local content="# ${title}
-
-参照: [${title}](${url})"
-
-  nb add --filename "${title}.md" --content "$content"
-  echo "Note created: [${title}](${url})"
-}
 # nb query - Search notes and select with fzf preview
 # Usage: nbq <search query>
 function nbq() {
@@ -431,68 +394,4 @@ function nbq() {
     local note_id=$(echo "$selected" | sed -E 's/^\[([0-9]+)\].*/\1/')
     nb edit "$note_id"
   fi
-}
-
-# nb web - Fetch webpage, convert to markdown, and save as note
-# Usage: nbw <notebook> <url>              - Auto-fetch title
-#        nbw <notebook> <title> <url>      - Manual title
-function nbw() {
-  if [ $# -lt 2 ]; then
-    echo "Usage: nbw <notebook> <url>           # Auto-fetch title"
-    echo "       nbw <notebook> <title> <url>   # Manual title"
-    return 1
-  fi
-
-  if ! command -v pandoc &> /dev/null; then
-    echo "Error: pandoc is not installed"
-    return 1
-  fi
-
-  local notebook="$1"
-  local title=""
-  local url=""
-
-  if [ $# -eq 2 ]; then
-    url="$2"
-  else
-    title="$2"
-    url="$3"
-  fi
-
-  echo "Fetching: $url"
-
-  local html=$(curl -sL --max-redirs 5 --max-time 30 --compressed "$url")
-
-  if [ -z "$html" ]; then
-    echo "Error: Could not fetch content from URL"
-    return 1
-  fi
-
-  if [ -z "$title" ]; then
-    title=$(echo "$html" | head -c 2048 | perl -0777 -ne 'print $1 if /<title[^>]*>([^<]+)<\/title>/i')
-    title=$(echo "$title" | perl -pe 's/^\s+|\s+$//g; s/\s+/ /g')
-
-    if [ -z "$title" ]; then
-      title=$(echo "$url" | sed -E 's|https?://([^/]+).*|\1|')
-    fi
-    echo "Title: $title"
-  fi
-
-  local markdown=$(echo "$html" | pandoc -f html -t markdown_strict-raw_html 2>/dev/null)
-
-  if [ -z "$markdown" ]; then
-    echo "Error: pandoc conversion failed"
-    return 1
-  fi
-
-  local content="# ${title}
-
-> 元記事: [${title}](${url})
-
----
-
-${markdown}"
-
-  nb "${notebook}:" add --content "$content"
-  echo "Note created in ${notebook}: ${title}"
 }
