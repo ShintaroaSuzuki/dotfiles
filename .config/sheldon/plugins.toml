@@ -47,3 +47,11 @@ bindkey '^g' zeno-ghq-cd
 '''
 [plugins.fast-syntax-highlighting]
 github = "zdharma-continuum/fast-syntax-highlighting"
+
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
+
+[plugins.zsh-autosuggestions.hooks]
+post = '''
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999,bg=transparent,bold,underline'
+'''

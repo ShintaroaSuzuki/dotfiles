@@ -169,10 +169,6 @@ else
   source ~/.antigen/antigen.zsh
 fi
 
-# https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
-antigen bundle zsh-users/zsh-autosuggestions
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999,bg=transparent,bold,underline'
-
 # https://github.com/choplin/cclog
 antigen bundle choplin/cclog@main
 
