@@ -119,15 +119,31 @@ $ nb semindex
 
 ## Claude の設定
 
-### プラグインのインストール
+### Claude Code プラグインのインストール
 
 ```
 $ claude
+> /plugin install typescript-lsp@claude-plugins-official
+> /plugin install code-simplifier@claude-plugins-official
+> /plugin install context7@claude-plugins-official
+
 > /plugin marketplace add https://github.com/ShintaroaSuzuki/shintaroasuzuki-plugins
 > /plugin install frontend-design@shintaroasuzuki-plugins
 > /plugin install ux-concepts@shintaroasuzuki-plugins
 > /plugin install commit-commands@shintaroasuzuki-plugins
 > /plugin install codex-collaborator@shintaroasuzuki-plugins
+
+> /plugin marketplace add https://github.com/anthropics/claude-code
+> /plugin install ralph-wiggum@claude-code-plugins
+> /plugin install security-guidance@claude-code-plugins
+> /plugin install pr-review-toolkit@claude-code-plugins
+> /plugin install hookify@claude-plugins-official
+> /plugin install feature-dev@claude-code-plugins
+> /plugin install explanatory-output-style@claude-code-plugins
+> /plugin install code-review@claude-code-plugins
+
+> /plugin marketplace add https://github.com/mixedbread-ai/mgrep
+> /plugin install mgrep@Mixedbread-Grep
 ```
 
 ## Copilot の設定
