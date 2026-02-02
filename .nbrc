@@ -28,3 +28,5 @@ export  NB_INDICATOR_PINNED="📌"
 export  NB_INDICATOR_TODO="✔️ "
 export  NB_INDICATOR_TODO_DONE="✅"
 export  NB_INDICATOR_VIDEO="📹"
+
+export NB_LIMIT="${NB_LIMIT:-5}" # Set by `nb` • 2026年 1月28日 水曜日 01時33分17秒 JST
