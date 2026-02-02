@@ -52,6 +52,7 @@ brew "libiconv"
 brew "libxml2"
 brew "luajit", args: ["HEAD"]
 brew "mas"
+brew "mosh"
 brew "mysql"
 brew "tree-sitter", args: ["HEAD"]
 brew "neovim", args: ["HEAD"]
