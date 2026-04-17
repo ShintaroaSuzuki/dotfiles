@@ -355,6 +355,12 @@ eval "$(uvx --generate-shell-completion zsh)"
 # claude code native install
 export PATH="$HOME/.local/bin:$PATH"
 
+# Claude Code Effort Level
+export CLAUDE_CODE_EFFORT_LEVEL=max
+
+# Claude Code Adaptive Thinking
+export CLAUDE_CODE_DISABLE_ADAPTIVE_THINKING=1
+
 #--------------------------
 # nb
 #--------------------------

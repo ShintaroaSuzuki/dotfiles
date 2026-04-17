@@ -119,6 +119,12 @@ $ nb semindex
 
 ## Claude の設定
 
+### Claude Code のインストール
+
+```
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
 ### Claude Code プラグインのインストール
 
 ```
