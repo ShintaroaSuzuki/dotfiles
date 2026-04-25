@@ -52,6 +52,10 @@
     "code-review@claude-plugins-official": true
   },
   "effortLevel": "high",
+  "skipDangerousModePermissionPrompt": true,
   "voiceEnabled": true,
-  "skipDangerousModePermissionPrompt": true
+  "skipAutoPermissionPrompt": true,
+  "permissions": {
+    "defaultMode": "auto"
+  }
 }
