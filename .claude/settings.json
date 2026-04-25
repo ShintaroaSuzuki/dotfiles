@@ -1,4 +1,7 @@
 {
+  "permissions": {
+    "defaultMode": "auto"
+  },
   "hooks": {
     "Stop": [
       {
@@ -53,9 +56,8 @@
   },
   "effortLevel": "high",
   "skipDangerousModePermissionPrompt": true,
-  "voiceEnabled": true,
   "skipAutoPermissionPrompt": true,
-  "permissions": {
-    "defaultMode": "auto"
-  }
+  "voiceEnabled": true,
+  "theme": "dark-ansi",
+  "editorMode": "vim"
 }
