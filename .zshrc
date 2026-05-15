@@ -377,6 +377,3 @@ function nbq() {
     nb edit "$note_id"
   fi
 }
-
-# OpenClaw Completion
-source "/Users/shintaro/.openclaw/completions/openclaw.zsh"
