@@ -22,3 +22,5 @@
 !/.claude/commands
 !/.claude/skills
 !/.serena/serena_config.yml
+!/.codex/
+!/.codex/hooks.json
