@@ -4,8 +4,8 @@
   "defaultModel": "gpt-5.5",
   "defaultThinkingLevel": "xhigh",
   "packages": [
-    "npm:@tintinweb/pi-subagents"
+    "npm:pi-computer-use",
+    "npm:pi-subagents"
   ],
   "theme": "dark"
 }
-
