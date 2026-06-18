@@ -4,8 +4,9 @@
   "defaultModel": "gpt-5.5",
   "defaultThinkingLevel": "xhigh",
   "packages": [
-    "npm:pi-computer-use",
-    "npm:pi-subagents"
+    "npm:pi-subagents",
+    "git:github.com/injaneity/pi-computer-use@v0.3.1",
+    "npm:@bitcraft-apps/pi-web-tools"
   ],
   "theme": "dark"
 }
