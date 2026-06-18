@@ -3,7 +3,7 @@
     "defaultMode": "auto"
   },
   "hooks": {
-    "Stop": [
+    "Notification": [
       {
         "matcher": "",
         "hooks": [
@@ -14,7 +14,7 @@
         ]
       }
     ],
-    "Notification": [
+    "Stop": [
       {
         "matcher": "",
         "hooks": [
@@ -31,29 +31,29 @@
     "command": "bunx ccusage statusline"
   },
   "enabledPlugins": {
-    "frontend-design@shintaroazusuki-plugins": true,
-    "frontend-design@claude-code-plugins": true,
-    "commit-commands@shintaroazusuki-plugins": true,
-    "ux_concepts@shintaroazusuki-plugins": true,
-    "elevator-music@sevii-agent-marketplace": false,
-    "typescript-lsp@claude-plugins-official": true,
-    "frontend-design@claude-plugins-official": true,
-    "ux-concepts@shintaroazusuki-plugins": true,
-    "commit-commands@claude-plugins-official": true,
-    "example-skills@anthropic-agent-skills": true,
-    "document-skills@anthropic-agent-skills": true,
-    "codex-collaborator@shintaroazusuki-plugins": true,
-    "mgrep@Mixedbread-Grep": true,
+    "code-review@claude-plugins-official": true,
     "code-simplifier@claude-plugins-official": true,
+    "codex-collaborator@shintaroazusuki-plugins": true,
+    "codex@openai-codex": true,
+    "commit-commands@claude-plugins-official": true,
+    "commit-commands@shintaroazusuki-plugins": true,
     "context7@claude-plugins-official": true,
+    "document-skills@anthropic-agent-skills": true,
+    "elevator-music@sevii-agent-marketplace": false,
+    "example-skills@anthropic-agent-skills": true,
+    "explanatory-output-style@claude-plugins-official": true,
+    "feature-dev@claude-plugins-official": true,
+    "frontend-design@claude-code-plugins": true,
+    "frontend-design@claude-plugins-official": true,
+    "frontend-design@shintaroazusuki-plugins": true,
+    "hookify@claude-plugins-official": true,
+    "mgrep@Mixedbread-Grep": true,
+    "pr-review-toolkit@claude-plugins-official": true,
     "ralph-wiggum@claude-code-plugins": true,
     "security-guidance@claude-plugins-official": true,
-    "pr-review-toolkit@claude-plugins-official": true,
-    "hookify@claude-plugins-official": true,
-    "feature-dev@claude-plugins-official": true,
-    "explanatory-output-style@claude-plugins-official": true,
-    "code-review@claude-plugins-official": true,
-    "codex@openai-codex": true
+    "typescript-lsp@claude-plugins-official": true,
+    "ux-concepts@shintaroazusuki-plugins": true,
+    "ux_concepts@shintaroazusuki-plugins": true
   },
   "extraKnownMarketplaces": {
     "openai-codex": {
@@ -69,5 +69,6 @@
   "editorMode": "vim",
   "agentPushNotifEnabled": true,
   "skipAutoPermissionPrompt": true,
-  "voiceEnabled": true
+  "voiceEnabled": true,
+  "model": "claude-fable-5[1m]"
 }
