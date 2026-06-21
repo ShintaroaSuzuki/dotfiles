@@ -13,7 +13,7 @@
 ```
 $ cd ~
 
-$ git clone https://shintaroasuzuki/dotfiles.git
+$ git clone https://github.com/shintaroasuzuki/dotfiles.git
 ```
 
 ## powerlevel10k のインストール
