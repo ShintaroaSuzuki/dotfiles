@@ -189,9 +189,9 @@ if [ -e "${HOME}/.iterm2_shell_integration.zsh" ]; then
 fi
 
 # tmux auto start
-if [ -z "$TMUX" ]; then
-  exec tmux new-session -A
-fi
+# if [ -z "$TMUX" ]; then
+#   exec tmux new-session -A
+# fi
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/shintaro/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/shintaro/google-cloud-sdk/path.zsh.inc'; fi
