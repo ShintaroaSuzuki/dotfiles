@@ -22,4 +22,5 @@
 !/.claude/commands
 !/.claude/skills
 !/.codex/hooks.json
+!/.codex/config.toml
 !/.pi/agent/settings.json
