@@ -1,12 +1,13 @@
 {
-  "lastChangelogVersion": "0.79.6",
+  "lastChangelogVersion": "0.81.1",
   "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-5.5",
-  "defaultThinkingLevel": "xhigh",
+  "defaultModel": "gpt-5.6-sol",
+  "defaultThinkingLevel": "max",
   "packages": [
     "npm:pi-subagents",
     "git:github.com/injaneity/pi-computer-use@v0.3.1",
-    "npm:@bitcraft-apps/pi-web-tools"
+    "npm:@bitcraft-apps/pi-web-tools",
+    "npm:@howaboua/pi-gippity-control"
   ],
   "theme": "dark"
 }
