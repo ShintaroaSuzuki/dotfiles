@@ -85,12 +85,24 @@ $ gh auth setup-git
 
 複数アカウントを使い分ける場合は `gh auth login` を繰り返してアカウントを追加したのち、`gh auth switch` で切り替える。
 
+### `gh dash` のインストール
+
+```
+$ gh extension install dlvhdr/gh-dash
+```
+
 ## nvim の設定
 
 ### Avante.nvim 用の Anthropic API キーの設定 (必要に応じて)
 
 ```
 $ cp ~/.config/nvim/.env.example ~/.config/nvim/.env
+```
+
+## [collie](https://github.com/AltanS/collie) のインストール
+
+```
+$ curl -fsSL https://colliepwa.dev/install.sh | sh
 ```
 
 ## nb の設定

@@ -8,7 +8,14 @@
 !/.zshrc
 !/.zsh/**
 !/.tmux.conf
+!/.config/
 !/.config/nvim/**
+!/.config/herdr/
+!/.config/herdr/config.toml
+!/.config/herdr/plugins/
+!/.config/herdr/plugins/config/
+!/.config/herdr/plugins/config/herdr.collie/
+!/.config/herdr/plugins/config/herdr.collie/.env
 !/.templates/**
 !/.Brewfile
 !/.hyper.js
@@ -21,6 +28,10 @@
 !/.claude/settings.json
 !/.claude/commands
 !/.claude/skills
+!/.codex/
 !/.codex/hooks.json
 !/.codex/config.toml
+!/.omp/
+!/.omp/agent/
+!/.omp/agent/config.yml
 !/.pi/agent/settings.json

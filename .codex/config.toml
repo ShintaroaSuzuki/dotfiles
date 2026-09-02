@@ -2,3 +2,484 @@ model = "gpt-5.6-sol"
 model_reasoning_effort = "max"
 model_verbosity = "low"
 personality = "pragmatic"
+
+approvals_reviewer = "guardian_subagent"
+
+
+notify = ["/Users/shintaro/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended"]
+service_tier = "fast"
+
+[projects."/Users/shintaro/ghq/github.com/ShintaroaSuzuki/jpx-forward-papertrader"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/ShintaroaSuzuki/claude-code-majordomo"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/codex_image_test"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/atypical-inc/tweet-automation"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/Documents/Codex/2026-05-05/iphone"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/atypical-inc/medication-reminder"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/atypical-inc/pi"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/atypical-inc/pi-orchestrator"]
+trust_level = "trusted"
+
+[projects."/private/var/folders/2v/1b4vknxj1dnc17jz5cx45c840000gn/T/openclaw-crestodian-planner-vT7qD8"]
+trust_level = "trusted"
+
+[projects."/private/var/folders/2v/1b4vknxj1dnc17jz5cx45c840000gn/T/openclaw-crestodian-planner-rQmfby"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/atypical-inc/goombas"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/atypical-inc/goombas-cloud"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/dotfiles"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/atypical-inc/pharmacies-hp"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/atypical-inc/atypical-hp"]
+trust_level = "trusted"
+
+[projects."/home/runner/_work/medication-reminder/medication-reminder"]
+trust_level = "trusted"
+
+[projects."/home/runner/_work/medication-reminder/medication-reminder/pr-worktree"]
+trust_level = "trusted"
+
+[projects."/home/runner/_work/atypical-hp/atypical-hp"]
+trust_level = "trusted"
+
+[projects."/home/runner/_work/atypical-hp/atypical-hp/pr-worktree"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/atypical-inc/ai-commerce-enablement-saas"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/atypical-inc/atypical-claude-plugins"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/atypical-inc/ai-creative-promotion-video"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/atypical-inc/ui-catalog"]
+trust_level = "trusted"
+
+[projects."/home/runner/_work/goombas-cloud/goombas-cloud"]
+trust_level = "trusted"
+
+[projects."/home/runner/_work/goombas-cloud/goombas-cloud/pr-worktree"]
+trust_level = "trusted"
+
+[projects."/private/tmp"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/atypical-inc/pi-settings"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/atypical-inc/mitekuri"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/atypical-inc/design-systems"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/Waishnav/devspace"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/ShintaroaSuzuki/local-use-mcp-server"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/atypical-inc/workspace-launcher"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/deux1212/bar-pos-mvp"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/ShintaroaSuzuki/animation-gallery"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/dcolinmorgan/herdr-remote"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/atypical-inc/loop-scrum"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/Documents/Codex/2026-07-16/new-chat"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/ShintaroaSuzuki/obsidian"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/atypical-inc/goombas-local"]
+trust_level = "trusted"
+
+[projects."/private/var/folders/2v/1b4vknxj1dnc17jz5cx45c840000gn/T/atypical-cover-imagegen-uBmpl0"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/atypical-inc/graph-engineering"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/anthropics/html-effectiveness"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/atypical-inc/graphoop"]
+trust_level = "trusted"
+
+[projects."/private/var/folders/2v/1b4vknxj1dnc17jz5cx45c840000gn/T/atypical-cover-imagegen-yrXwfh"]
+trust_level = "trusted"
+
+[projects."/private/var/folders/2v/1b4vknxj1dnc17jz5cx45c840000gn/T/atypical-cover-imagegen-A1akoP"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/atypical-inc/merchant-edge"]
+trust_level = "trusted"
+
+[projects."/private/var/folders/2v/1b4vknxj1dnc17jz5cx45c840000gn/T/atypical-cover-imagegen-nu0Uuq"]
+trust_level = "trusted"
+
+[projects."/private/var/folders/2v/1b4vknxj1dnc17jz5cx45c840000gn/T/atypical-cover-imagegen-T9y3AM"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/ShintaroaSuzuki/ChangeLocationSample"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/atypical-inc/skills"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/ShintaroaSuzuki/ghostify"]
+trust_level = "trusted"
+
+[projects."/private/var/folders/2v/1b4vknxj1dnc17jz5cx45c840000gn/T/atypical-cover-imagegen-gAzNoj"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/atypical-inc/graphene"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/atypical-inc/lockshelf"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/atypical-inc/cloudflare-os"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/atypical-inc/akinaiboost"]
+trust_level = "trusted"
+
+[projects."/private/var/folders/2v/1b4vknxj1dnc17jz5cx45c840000gn/T/atypical-cover-imagegen-lwTTTl"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/openai/tunnel-client"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/atypical-inc/facilitate-gpt"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com"]
+trust_level = "trusted"
+
+[projects."/private/var/folders/2v/1b4vknxj1dnc17jz5cx45c840000gn/T/atypical-cover-imagegen-fXRRBa"]
+trust_level = "trusted"
+
+[projects."/private/var/folders/2v/1b4vknxj1dnc17jz5cx45c840000gn/T/atypical-cover-imagegen-RTXXOB"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/Appllama/appllama-skills"]
+trust_level = "trusted"
+
+[projects."/Users/shintaro/ghq/github.com/dorisukeone/x-bookmark-to-md"]
+trust_level = "trusted"
+
+[projects."/private/var/folders/2v/1b4vknxj1dnc17jz5cx45c840000gn/T/atypical-cover-imagegen-tAooWs"]
+trust_level = "trusted"
+
+[projects."/private/var/folders/2v/1b4vknxj1dnc17jz5cx45c840000gn/T/atypical-cover-imagegen-k6XNbc"]
+trust_level = "trusted"
+
+[notice]
+fast_default_opt_out = true
+
+[notice.model_migrations]
+"gpt-5.2-codex" = "gpt-5.4"
+
+[marketplaces.openai-bundled]
+last_updated = "2026-08-18T17:21:11Z"
+source_type = "local"
+source = "/Users/shintaro/.codex/.tmp/bundled-marketplaces/openai-bundled"
+
+[marketplaces.openai-primary-runtime]
+last_updated = "2026-08-27T08:56:24Z"
+source_type = "local"
+source = "/Users/shintaro/.cache/codex-runtimes/codex-primary-runtime/plugins/openai-primary-runtime"
+
+[plugins."documents@openai-primary-runtime"]
+enabled = true
+
+[plugins."spreadsheets@openai-primary-runtime"]
+enabled = true
+
+[plugins."presentations@openai-primary-runtime"]
+enabled = true
+
+[plugins."computer-use@openai-bundled"]
+enabled = true
+
+[plugins."chrome@openai-bundled"]
+enabled = true
+
+[plugins."pdf@openai-primary-runtime"]
+enabled = true
+
+[plugins."template-creator@openai-primary-runtime"]
+enabled = true
+
+[plugins."sites@openai-bundled"]
+enabled = true
+
+[plugins."visualize@openai-bundled"]
+enabled = true
+
+[plugins."browser@openai-bundled"]
+enabled = true
+
+[tui.model_availability_nux]
+"gpt-5.5" = 4
+"gpt-5.6-sol" = 4
+
+[desktop]
+ambient-suggestions-enabled = false
+appearanceTheme = "light"
+preventSleepWhileRunning = true
+keepRemoteControlAwakeWhilePluggedIn = true
+conversationDetailMode = "STEPS_PROSE"
+followUpQueueMode = "queue"
+dock-icon-preference = "app-default"
+usePointerCursors = true
+
+[features]
+hooks = true
+js_repl = false
+
+[mcp_servers.node_repl]
+command = "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl"
+startup_timeout_sec = 120.0
+
+[mcp_servers.node_repl.env]
+BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab"
+BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
+BROWSER_USE_CODEX_APP_VERSION = "26.803.41515"
+CODEX_CLI_PATH = "/Applications/ChatGPT.app/Contents/Resources/codex"
+CODEX_HOME = "/Users/shintaro/.codex"
+NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = "Control the in-app browser in conjunction with the Browser Plugin."
+NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = "Control the Chrome browser in conjunction with the Chrome Plugin. Prefer this method of controlling Chrome over alternatives (such as Computer Use) unless the user explicitly mentions an alternative."
+NODE_REPL_INSTRUCTIONS_USE_CASE_COMPUTER_USE = "Control desktop apps on macOS through Computer Use."
+NODE_REPL_NATIVE_PIPE_CONNECT_TIMEOUT_MS = "1000"
+NODE_REPL_NODE_MODULE_DIRS = "/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules"
+NODE_REPL_NODE_PATH = "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node"
+NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "323bc3e687e17d7e377238d9f4c69111c4d0e6219103b6316d8c52082489533b"
+NODE_REPL_TRUSTED_CODE_PATHS = "/Users/shintaro/.codex:/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules"
+SKY_CUA_SERVICE_PATH = "/Users/shintaro/.codex/computer-use/Codex Computer Use.app"
+
+[mcp_servers.computer-use]
+command = "./Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient"
+args = ["mcp"]
+cwd = "."
+enabled = false
+
+[mcp_servers.openaiDeveloperDocs]
+url = "https://developers.openai.com/mcp"
+
+[hooks.state]
+
+[hooks.state."/Users/shintaro/.codex/hooks.json:permission_request:0:0"]
+trusted_hash = "sha256:ab5d2e88eaca601572394c7e2788c2a704bd3281f15a47776afe839287eb841d"
+
+[hooks.state."/Users/shintaro/.codex/hooks.json:stop:0:0"]
+trusted_hash = "sha256:e2305cac5ae49c4d0dc27095154969052b75c53e3d266d5b0acf4f1d4124468c"
+
+[hooks.state."/Users/shintaro/dotfiles/.codex/hooks.json:permission_request:0:0"]
+trusted_hash = "sha256:ab5d2e88eaca601572394c7e2788c2a704bd3281f15a47776afe839287eb841d"
+
+[hooks.state."/Users/shintaro/dotfiles/.codex/hooks.json:stop:0:0"]
+trusted_hash = "sha256:e2305cac5ae49c4d0dc27095154969052b75c53e3d266d5b0acf4f1d4124468c"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/mitekuri/.codex/hooks.json:stop:0:0"]
+trusted_hash = "sha256:db36c39bf39c6335152db0eeea0af798663f09f505279ac98e229d918020f2cb"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/workspace-launcher/.codex/hooks.json:stop:0:0"]
+trusted_hash = "sha256:77218dcb89c95ebb54a2eabc6eaadc477b92057cccd7b4eaa9626aab24fca411"
+
+[hooks.state."/Users/shintaro/ghq/github.com/deux1212/bar-pos-mvp/.codex/hooks.json:stop:0:0"]
+trusted_hash = "sha256:db36c39bf39c6335152db0eeea0af798663f09f505279ac98e229d918020f2cb"
+
+[hooks.state."/Users/shintaro/.codex/hooks.json:session_start:0:0"]
+trusted_hash = "sha256:8694007880af3236e47cc3f3ea0e058599f6f0bf4727af4722b6b7a6b4ad7a55"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/graph-engineering/.codex/hooks.json:session_start:0:0"]
+trusted_hash = "sha256:d359239fae821e1e7f03b71cafe70539b1e50d64eee6d80adb0cf373e00faef1"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/graph-engineering/.codex/hooks.json:user_prompt_submit:0:0"]
+trusted_hash = "sha256:7a725f1b60c1a1ee4851e9815ed9f0147a8c65fb928be9ff3013104e33215ad1"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/graph-engineering/.codex/hooks.json:subagent_start:0:0"]
+trusted_hash = "sha256:aefca13c166bf026d3dab7a65d66fc5476d9029aeb2713b0c015161896afee6a"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/graph-engineering/.codex/hooks.json:stop:0:0"]
+trusted_hash = "sha256:a5101a6a0d1598be3ef4a1ce4b285d61f5d3fbdcf9c5224278ef33d9d9dac1f6"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/graphoop/.codex/hooks.json:session_start:0:0"]
+trusted_hash = "sha256:d359239fae821e1e7f03b71cafe70539b1e50d64eee6d80adb0cf373e00faef1"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/graphoop/.codex/hooks.json:user_prompt_submit:0:0"]
+trusted_hash = "sha256:7a725f1b60c1a1ee4851e9815ed9f0147a8c65fb928be9ff3013104e33215ad1"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/graphoop/.codex/hooks.json:subagent_start:0:0"]
+trusted_hash = "sha256:aefca13c166bf026d3dab7a65d66fc5476d9029aeb2713b0c015161896afee6a"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/graphoop/.codex/hooks.json:stop:0:0"]
+trusted_hash = "sha256:81ae28dd66f1ec432d562f070b33c001176b0dfa8e6a910556163d38989241c0"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/skills/.codex/hooks.json:session_start:0:0"]
+trusted_hash = "sha256:d359239fae821e1e7f03b71cafe70539b1e50d64eee6d80adb0cf373e00faef1"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/skills/.codex/hooks.json:user_prompt_submit:0:0"]
+trusted_hash = "sha256:7a725f1b60c1a1ee4851e9815ed9f0147a8c65fb928be9ff3013104e33215ad1"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/skills/.codex/hooks.json:subagent_start:0:0"]
+trusted_hash = "sha256:aefca13c166bf026d3dab7a65d66fc5476d9029aeb2713b0c015161896afee6a"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/skills/.codex/hooks.json:stop:0:0"]
+trusted_hash = "sha256:81ae28dd66f1ec432d562f070b33c001176b0dfa8e6a910556163d38989241c0"
+
+[hooks.state."/Users/shintaro/ghq/github.com/ShintaroaSuzuki/ChangeLocationSample/.codex/hooks.json:session_start:0:0"]
+trusted_hash = "sha256:d359239fae821e1e7f03b71cafe70539b1e50d64eee6d80adb0cf373e00faef1"
+
+[hooks.state."/Users/shintaro/ghq/github.com/ShintaroaSuzuki/ChangeLocationSample/.codex/hooks.json:user_prompt_submit:0:0"]
+trusted_hash = "sha256:7a725f1b60c1a1ee4851e9815ed9f0147a8c65fb928be9ff3013104e33215ad1"
+
+[hooks.state."/Users/shintaro/ghq/github.com/ShintaroaSuzuki/ChangeLocationSample/.codex/hooks.json:subagent_start:0:0"]
+trusted_hash = "sha256:aefca13c166bf026d3dab7a65d66fc5476d9029aeb2713b0c015161896afee6a"
+
+[hooks.state."/Users/shintaro/ghq/github.com/ShintaroaSuzuki/ChangeLocationSample/.codex/hooks.json:stop:0:0"]
+trusted_hash = "sha256:81ae28dd66f1ec432d562f070b33c001176b0dfa8e6a910556163d38989241c0"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/merchant-edge/.codex/hooks.json:session_start:0:0"]
+trusted_hash = "sha256:d359239fae821e1e7f03b71cafe70539b1e50d64eee6d80adb0cf373e00faef1"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/merchant-edge/.codex/hooks.json:user_prompt_submit:0:0"]
+trusted_hash = "sha256:7a725f1b60c1a1ee4851e9815ed9f0147a8c65fb928be9ff3013104e33215ad1"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/merchant-edge/.codex/hooks.json:subagent_start:0:0"]
+trusted_hash = "sha256:aefca13c166bf026d3dab7a65d66fc5476d9029aeb2713b0c015161896afee6a"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/merchant-edge/.codex/hooks.json:stop:0:0"]
+trusted_hash = "sha256:81ae28dd66f1ec432d562f070b33c001176b0dfa8e6a910556163d38989241c0"
+
+[hooks.state."/Users/shintaro/ghq/github.com/ShintaroaSuzuki/ghostify/.codex/hooks.json:session_start:0:0"]
+trusted_hash = "sha256:d359239fae821e1e7f03b71cafe70539b1e50d64eee6d80adb0cf373e00faef1"
+
+[hooks.state."/Users/shintaro/ghq/github.com/ShintaroaSuzuki/ghostify/.codex/hooks.json:user_prompt_submit:0:0"]
+trusted_hash = "sha256:7a725f1b60c1a1ee4851e9815ed9f0147a8c65fb928be9ff3013104e33215ad1"
+
+[hooks.state."/Users/shintaro/ghq/github.com/ShintaroaSuzuki/ghostify/.codex/hooks.json:subagent_start:0:0"]
+trusted_hash = "sha256:aefca13c166bf026d3dab7a65d66fc5476d9029aeb2713b0c015161896afee6a"
+
+[hooks.state."/Users/shintaro/ghq/github.com/ShintaroaSuzuki/ghostify/.codex/hooks.json:stop:0:0"]
+trusted_hash = "sha256:81ae28dd66f1ec432d562f070b33c001176b0dfa8e6a910556163d38989241c0"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/graphene/.codex/hooks.json:session_start:0:0"]
+trusted_hash = "sha256:d359239fae821e1e7f03b71cafe70539b1e50d64eee6d80adb0cf373e00faef1"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/graphene/.codex/hooks.json:user_prompt_submit:0:0"]
+trusted_hash = "sha256:7a725f1b60c1a1ee4851e9815ed9f0147a8c65fb928be9ff3013104e33215ad1"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/graphene/.codex/hooks.json:subagent_start:0:0"]
+trusted_hash = "sha256:aefca13c166bf026d3dab7a65d66fc5476d9029aeb2713b0c015161896afee6a"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/graphene/.codex/hooks.json:stop:0:0"]
+trusted_hash = "sha256:81ae28dd66f1ec432d562f070b33c001176b0dfa8e6a910556163d38989241c0"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/lockshelf/.codex/hooks.json:session_start:0:0"]
+trusted_hash = "sha256:d359239fae821e1e7f03b71cafe70539b1e50d64eee6d80adb0cf373e00faef1"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/lockshelf/.codex/hooks.json:user_prompt_submit:0:0"]
+trusted_hash = "sha256:7a725f1b60c1a1ee4851e9815ed9f0147a8c65fb928be9ff3013104e33215ad1"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/lockshelf/.codex/hooks.json:subagent_start:0:0"]
+trusted_hash = "sha256:aefca13c166bf026d3dab7a65d66fc5476d9029aeb2713b0c015161896afee6a"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/lockshelf/.codex/hooks.json:stop:0:0"]
+trusted_hash = "sha256:81ae28dd66f1ec432d562f070b33c001176b0dfa8e6a910556163d38989241c0"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/cloudflare-os/.codex/hooks.json:session_start:0:0"]
+trusted_hash = "sha256:d359239fae821e1e7f03b71cafe70539b1e50d64eee6d80adb0cf373e00faef1"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/cloudflare-os/.codex/hooks.json:user_prompt_submit:0:0"]
+trusted_hash = "sha256:7a725f1b60c1a1ee4851e9815ed9f0147a8c65fb928be9ff3013104e33215ad1"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/cloudflare-os/.codex/hooks.json:subagent_start:0:0"]
+trusted_hash = "sha256:aefca13c166bf026d3dab7a65d66fc5476d9029aeb2713b0c015161896afee6a"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/cloudflare-os/.codex/hooks.json:stop:0:0"]
+trusted_hash = "sha256:81ae28dd66f1ec432d562f070b33c001176b0dfa8e6a910556163d38989241c0"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/akinaiboost/.codex/hooks.json:session_start:0:0"]
+trusted_hash = "sha256:d359239fae821e1e7f03b71cafe70539b1e50d64eee6d80adb0cf373e00faef1"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/akinaiboost/.codex/hooks.json:user_prompt_submit:0:0"]
+trusted_hash = "sha256:7a725f1b60c1a1ee4851e9815ed9f0147a8c65fb928be9ff3013104e33215ad1"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/akinaiboost/.codex/hooks.json:subagent_start:0:0"]
+trusted_hash = "sha256:aefca13c166bf026d3dab7a65d66fc5476d9029aeb2713b0c015161896afee6a"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/akinaiboost/.codex/hooks.json:stop:0:0"]
+trusted_hash = "sha256:81ae28dd66f1ec432d562f070b33c001176b0dfa8e6a910556163d38989241c0"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/medication-reminder/.codex/hooks.json:session_start:0:0"]
+trusted_hash = "sha256:d359239fae821e1e7f03b71cafe70539b1e50d64eee6d80adb0cf373e00faef1"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/medication-reminder/.codex/hooks.json:user_prompt_submit:0:0"]
+trusted_hash = "sha256:7a725f1b60c1a1ee4851e9815ed9f0147a8c65fb928be9ff3013104e33215ad1"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/medication-reminder/.codex/hooks.json:subagent_start:0:0"]
+trusted_hash = "sha256:aefca13c166bf026d3dab7a65d66fc5476d9029aeb2713b0c015161896afee6a"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/medication-reminder/.codex/hooks.json:stop:0:0"]
+trusted_hash = "sha256:81ae28dd66f1ec432d562f070b33c001176b0dfa8e6a910556163d38989241c0"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/akinaiboost/.codex/hooks.json:stop:1:0"]
+trusted_hash = "sha256:db36c39bf39c6335152db0eeea0af798663f09f505279ac98e229d918020f2cb"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/facilitate-gpt/.codex/hooks.json:session_start:0:0"]
+trusted_hash = "sha256:d359239fae821e1e7f03b71cafe70539b1e50d64eee6d80adb0cf373e00faef1"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/facilitate-gpt/.codex/hooks.json:user_prompt_submit:0:0"]
+trusted_hash = "sha256:7a725f1b60c1a1ee4851e9815ed9f0147a8c65fb928be9ff3013104e33215ad1"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/facilitate-gpt/.codex/hooks.json:subagent_start:0:0"]
+trusted_hash = "sha256:aefca13c166bf026d3dab7a65d66fc5476d9029aeb2713b0c015161896afee6a"
+
+[hooks.state."/Users/shintaro/ghq/github.com/atypical-inc/facilitate-gpt/.codex/hooks.json:stop:0:0"]
+trusted_hash = "sha256:81ae28dd66f1ec432d562f070b33c001176b0dfa8e6a910556163d38989241c0"
+
+[hooks.state."/Users/shintaro/dotfiles/.codex/hooks.json:session_start:0:0"]
+trusted_hash = "sha256:8694007880af3236e47cc3f3ea0e058599f6f0bf4727af4722b6b7a6b4ad7a55"
+
+[shell_environment_policy.set]
+BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab"
+NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "323bc3e687e17d7e377238d9f4c69111c4d0e6219103b6316d8c52082489533b"
+NODE_REPL_TRUSTED_CODE_PATHS = "/Users/shintaro/.codex:/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules"

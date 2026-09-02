@@ -1,0 +1,8 @@
+setupVersion: 2
+modelRoles:
+  default: openai-codex/gpt-5.6-sol
+defaultThinkingLevel: max
+dev:
+  autoqaConsent: granted
+tier:
+  openai: priority
