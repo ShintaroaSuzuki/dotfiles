@@ -52,14 +52,6 @@ karabiner-elements を起動し、「Complex Modifications > Add predefined rule
 
 環境設定から、スペースの入力を「半角」に変更
 
-## tpm (tmux plugin manager) のインストール
-
-```
-$ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-```
-
-prefix + I (大文字の I) を実行すると、tmux のプラグインがインストールされる
-
 ## git 関連の設定
 
 ### gitconfig の作成
