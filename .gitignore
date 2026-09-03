@@ -15,7 +15,7 @@
 !/.config/herdr/plugins/
 !/.config/herdr/plugins/config/
 !/.config/herdr/plugins/config/herdr.collie/
-!/.config/herdr/plugins/config/herdr.collie/.env
+!/.config/herdr/plugins/config/herdr.collie/.env.example
 !/.templates/**
 !/.Brewfile
 !/.hyper.js

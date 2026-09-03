@@ -105,6 +105,31 @@ $ cp ~/.config/nvim/.env.example ~/.config/nvim/.env
 $ curl -fsSL https://colliepwa.dev/install.sh | sh
 ```
 
+### ローカル設定ファイルの作成
+
+VAPID 秘密鍵を Git に含めないため、Git 管理下の `.env.example` をローカル専用の
+`.env` にコピーする。`.env` は `.gitignore` で除外されている。
+
+```
+$ cp ~/.config/herdr/plugins/config/herdr.collie/.env.example \
+    ~/.config/herdr/plugins/config/herdr.collie/.env
+$ chmod 600 ~/.config/herdr/plugins/config/herdr.collie/.env
+```
+
+### プッシュ通知の有効化
+
+```
+$ collie push-keys mailto:you@example.com
+$ collie restart
+```
+
+スマートフォンで Collie を再読み込みし、「Settings → Notifications」から通知を
+有効化して、OS またはブラウザの通知許可を承認する。その後、配信を確認する。
+
+```
+$ collie push-test
+```
+
 ## nb の設定
 
 ### notebook の作成とリモートリポジトリの設定
