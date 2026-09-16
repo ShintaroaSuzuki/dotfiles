@@ -1,8 +1,33 @@
 setupVersion: 2
 modelRoles:
-  default: openai-codex/gpt-5.6-sol
+  default: openai-codex/gpt-6-astra:max
 defaultThinkingLevel: max
 dev:
   autoqaConsent: granted
 tier:
   openai: priority
+theme:
+  dark: dark-taiga
+symbolPreset: nerd
+colorBlindMode: false
+statusLine:
+  separator: powerline-thin
+  contextLine: annotated
+  sessionAccent: true
+  transparent: false
+  compactThinkingLevel: false
+  showHookStatus: true
+  preset: full
+terminal:
+  showProgress: false
+tui:
+  textSizing: false
+  codexResetFireworks: true
+task:
+  showResolvedModelBadge: false
+  disabledAgents:
+    []
+images:
+  autoResize: true
+composer:
+  shape: rule
