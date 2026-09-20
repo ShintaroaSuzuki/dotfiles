@@ -1,7 +1,7 @@
 setupVersion: 2
 modelRoles:
-  default: openai-codex/gpt-6-astra:max
-defaultThinkingLevel: max
+  default: openai-codex/gpt-6-astra
+defaultThinkingLevel: medium
 dev:
   autoqaConsent: granted
 tier:
@@ -31,3 +31,5 @@ images:
   autoResize: true
 composer:
   shape: rule
+browser:
+  relay: true
