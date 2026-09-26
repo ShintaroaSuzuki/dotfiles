@@ -24,6 +24,8 @@ $ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel1
 
 プロンプト設定は `.p10k.zsh` で管理する。下記の `stow` で
 `~/.p10k.zsh` にシンボリックリンクを作成し、`.zshrc` から読み込む。
+`.omp/agent/` は `config.yml` のみ追跡し、実行時のロックファイルを
+Git と p10k の `gitstatus` の両方で除外する。
 
 ## Homebrew のインストールとパッケージのインストール
 

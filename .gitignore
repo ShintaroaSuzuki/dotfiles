@@ -37,5 +37,7 @@
 !/.codex/config.toml
 !/.omp/
 !/.omp/agent/
+# Keep runtime state out of both Git and gitstatus; track only the config.
+/.omp/agent/*
 !/.omp/agent/config.yml
 !/.pi/agent/settings.json
