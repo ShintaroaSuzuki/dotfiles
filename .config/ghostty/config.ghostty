@@ -1,0 +1,44 @@
+# Hyper appearance port (.hyper.js); macOS logical sizing.
+font-family = 0xProto
+font-family = MesloLGS NF
+font-family = Hack Nerd Font Mono
+font-family = Hiragino Sans Ghostty
+font-style = Bold
+font-size = 12
+font-feature = -calt, -liga, -dlig
+font-thicken = false
+
+background = #2b3e4f
+foreground = #ffffff
+
+palette = 0=#333333
+palette = 1=#bf4d80
+palette = 2=#287373
+palette = 3=#7c7c99
+palette = 4=#395573
+palette = 5=#5e468c
+palette = 6=#31658c
+palette = 7=#899ca1
+palette = 8=#3d3d3d
+palette = 9=#bf4d80
+palette = 10=#53a6a6
+palette = 11=#9e9ecb
+palette = 12=#477ab3
+palette = 13=#7e62b3
+palette = 14=#6096bf
+palette = 15=#c0c5ce
+
+cursor-color = #c4c4c4
+cursor-opacity = 0.5
+cursor-text = #899ca1
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
+
+# Ghostty has no selection alpha: blend Hyper's rgba(248,28,229,0.3)
+# over the default background. Colored cell backgrounds will differ.
+selection-background = #69347c
+selection-foreground = cell-foreground
+
+window-padding-x = 14
+window-padding-y = 12

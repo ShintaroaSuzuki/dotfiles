@@ -5,7 +5,7 @@ defaultThinkingLevel: medium
 dev:
   autoqaConsent: granted
 tier:
-  openai: priority
+  openai: none
 theme:
   dark: dark-taiga
 symbolPreset: nerd

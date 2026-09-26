@@ -6,10 +6,14 @@
 !/.gitmessage
 !/.gitconfig.example
 !/.zshrc
+!/.p10k.zsh
 !/.zsh/**
 !/.tmux.conf
 !/.config/
 !/.config/nvim/**
+!/.config/ghostty/
+!/.config/ghostty/config.ghostty
+!/.config/ghostty/install-hiragino-fonts.py
 !/.config/herdr/
 !/.config/herdr/config.toml
 !/.config/herdr/plugins/

@@ -264,6 +264,24 @@ trust_level = "trusted"
 [projects."/private/var/folders/2v/1b4vknxj1dnc17jz5cx45c840000gn/T/atypical-cover-imagegen-DTCM8l"]
 trust_level = "trusted"
 
+[projects."/private/var/folders/2v/1b4vknxj1dnc17jz5cx45c840000gn/T/atypical-cover-imagegen-gmqUo5"]
+trust_level = "trusted"
+
+[projects."/private/var/folders/2v/1b4vknxj1dnc17jz5cx45c840000gn/T/atypical-cover-imagegen-Lj6J0I"]
+trust_level = "trusted"
+
+[projects."/private/var/folders/2v/1b4vknxj1dnc17jz5cx45c840000gn/T/atypical-cover-imagegen-jzqpDQ"]
+trust_level = "trusted"
+
+[projects."/private/var/folders/2v/1b4vknxj1dnc17jz5cx45c840000gn/T/atypical-cover-imagegen-ato8ph"]
+trust_level = "trusted"
+
+[projects."/private/var/folders/2v/1b4vknxj1dnc17jz5cx45c840000gn/T/atypical-cover-imagegen-A2SIH8"]
+trust_level = "trusted"
+
+[projects."/private/var/folders/2v/1b4vknxj1dnc17jz5cx45c840000gn/T/atypical-cover-imagegen-4tRi3g"]
+trust_level = "trusted"
+
 [notice]
 fast_default_opt_out = true
 
@@ -302,9 +320,6 @@ enabled = true
 enabled = true
 
 [plugins."template-creator@openai-primary-runtime"]
-enabled = true
-
-[plugins."sites@openai-bundled"]
 enabled = true
 
 [plugins."visualize@openai-bundled"]
@@ -358,8 +373,8 @@ NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = ""
 NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = ""
 NODE_REPL_INSTRUCTIONS_USE_CASE_COMPUTER_USE = ""
 BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
-BROWSER_USE_CODEX_APP_VERSION = "26.901.41123"
-NODE_REPL_TRUSTED_SERVICES = '{"browser":"/Users/shintaro/.codex/plugins/cache/openai-bundled/browser/26.901.41123/scripts/browser-service.mjs","sky":"@oai/sky/service"}'
+BROWSER_USE_CODEX_APP_VERSION = "26.911.61220"
+NODE_REPL_TRUSTED_SERVICES = '{"browser":"/Users/shintaro/.codex/plugins/cache/openai-bundled/browser/26.911.61220/scripts/browser-service.mjs","sky":"@oai/sky/service"}'
 SKY_CUA_SERVICE_PATH = "/Users/shintaro/.codex/computer-use/Codex Computer Use.app"
 CODEX_CLI_PATH = "/Applications/ChatGPT.app/Contents/Resources/codex"
 

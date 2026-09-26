@@ -22,6 +22,9 @@ $ git clone https://github.com/shintaroasuzuki/dotfiles.git
 $ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 ```
 
+プロンプト設定は `.p10k.zsh` で管理する。下記の `stow` で
+`~/.p10k.zsh` にシンボリックリンクを作成し、`.zshrc` から読み込む。
+
 ## Homebrew のインストールとパッケージのインストール
 
 ### Homebrew のインストール
@@ -43,6 +46,18 @@ $ brew bundle --file=~/dotfiles/.Brewfile
 ```
 $ cd dotfiles && stow -v -t ~ .
 ```
+
+## Ghostty の外観設定
+
+1. macOS に Ghostty・Swift・uv と、`0xProto`・`MesloLGS NF`・`Hack Nerd Font Mono` をインストールする。
+2. 上記の `stow` で Ghostty の設定ファイルとフォント登録スクリプトを配置する。
+3. 日本語フォントを登録する。
+
+   ```sh
+   uv run ~/.config/ghostty/install-hiragino-fonts.py
+   ```
+
+4. Ghostty を起動する。起動済みなら `Cmd+Shift+,` で設定を再読み込みし、新しいウィンドウを開く。
 
 ## Karabiner Elements の設定
 
