@@ -14,6 +14,8 @@
 !/.config/ghostty/
 !/.config/ghostty/config.ghostty
 !/.config/ghostty/install-hiragino-fonts.py
+!/.config/ghostty/icons/
+!/.config/ghostty/icons/*.icns
 !/.config/herdr/
 !/.config/herdr/config.toml
 !/.config/herdr/plugins/
