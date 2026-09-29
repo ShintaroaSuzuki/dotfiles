@@ -1,6 +1,6 @@
 setupVersion: 2
 modelRoles:
-  default: openai-codex/gpt-6-sol:medium
+  default: openai-codex/gpt-6-astra
 defaultThinkingLevel: medium
 dev:
   autoqaConsent: granted

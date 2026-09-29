@@ -13,6 +13,7 @@
 !/.config/nvim/**
 !/.config/ghostty/
 !/.config/ghostty/config.ghostty
+!/.config/ghostty/ghostty-rootshell.theme
 !/.config/ghostty/install-hiragino-fonts.py
 !/.config/ghostty/icons/
 !/.config/ghostty/icons/*.icns
