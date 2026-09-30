@@ -288,6 +288,9 @@ trust_level = "trusted"
 [projects."/private/var/folders/2v/1b4vknxj1dnc17jz5cx45c840000gn/T/atypical-cover-imagegen-EhNVCd"]
 trust_level = "trusted"
 
+[projects."/private/var/folders/2v/1b4vknxj1dnc17jz5cx45c840000gn/T/atypical-cover-imagegen-kYlioL"]
+trust_level = "trusted"
+
 [notice]
 fast_default_opt_out = true
 

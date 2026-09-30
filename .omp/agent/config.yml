@@ -1,7 +1,7 @@
 setupVersion: 2
 modelRoles:
-  default: openai-codex/gpt-6-astra
-defaultThinkingLevel: medium
+  {}
+defaultThinkingLevel: high
 dev:
   autoqaConsent: granted
 tier:

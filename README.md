@@ -78,6 +78,12 @@ $ cd dotfiles && stow -v -t ~ .
 Tailscale 経由で macOS 標準の SSH サーバーに接続するため、ルーターのポート開放や `tailscale up --ssh` は不要。
 tailnet のアクセス制御を設定している場合は、iPad から Mac の TCP ポート `22` への接続を許可する。
 
+### Rootshell から herdr にコントロールモードで接続する
+
+この環境では通常版の fallback 描画で日本語が崩れるため、接続先の Mac では [Rootshell 用 herdr fork](https://github.com/kitknox/herdr) を使う。CLI だけでなく稼働中サーバーも fork に切り替え、Rootshell の Debug 設定で **Force herdr Fallback Mode** をオフにする。
+
+切り替え手順は[公式ガイド](https://github.com/kitknox/rootshell/blob/main/docs/herdr-control-mode.md#install-the-optional-fork)を参照。バイナリの入れ替えだけでは起動済みサーバーは更新されない。**サーバー停止時はペイン内のプロセスも終了するため、先に作業を保存する。**
+
 ### Rootshell に Ghostty のカラーテーマを読み込む
 
 1. [ghostty-rootshell.theme](.config/ghostty/ghostty-rootshell.theme) を iPad の「ファイル」に保存する。Mac から AirDrop で送るか、GitHub のファイル画面から Raw ファイルをダウンロードする。

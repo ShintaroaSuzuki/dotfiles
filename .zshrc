@@ -377,3 +377,5 @@ function nbq() {
     nb edit "$note_id"
   fi
 }
+
+export PATH="$HOME/.local/opt/herdr-rootshell/bin:$PATH" # rootshell-herdr
