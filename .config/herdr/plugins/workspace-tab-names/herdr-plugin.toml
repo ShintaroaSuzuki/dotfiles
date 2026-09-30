@@ -1,0 +1,38 @@
+id = "dotfiles.workspace-tab-names"
+name = "Workspace tab names"
+version = "1.0.0"
+min_herdr_version = "0.9.1"
+description = "Name new tabs after their workspace and preserve manual names."
+platforms = ["macos", "linux"]
+
+[[startup]]
+command = ["python3", "sync.py"]
+
+[[actions]]
+id = "adopt"
+title = "Track tabs already named after their workspace"
+command = ["python3", "sync.py", "--adopt-matching"]
+
+[[events]]
+on = "workspace.created"
+command = ["python3", "sync.py"]
+
+[[events]]
+on = "tab.created"
+command = ["python3", "sync.py"]
+
+[[events]]
+on = "workspace.renamed"
+command = ["python3", "sync.py"]
+
+[[events]]
+on = "tab.renamed"
+command = ["python3", "sync.py"]
+
+[[events]]
+on = "tab.closed"
+command = ["python3", "sync.py"]
+
+[[events]]
+on = "workspace.closed"
+command = ["python3", "sync.py"]

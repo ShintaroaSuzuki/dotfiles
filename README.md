@@ -84,6 +84,19 @@ tailnet のアクセス制御を設定している場合は、iPad から Mac �
 
 切り替え手順は[公式ガイド](https://github.com/kitknox/rootshell/blob/main/docs/herdr-control-mode.md#install-the-optional-fork)を参照。バイナリの入れ替えだけでは起動済みサーバーは更新されない。**サーバー停止時はペイン内のプロセスも終了するため、先に作業を保存する。**
 
+#### タブ名をワークスペース名に自動追従させる
+
+Python 3 と herdr 0.9.1 以降が必要。herdr 内のシェルでローカルプラグインを登録する（サーバー再起動不要）。
+
+```sh
+herdr plugin link ~/dotfiles/.config/herdr/plugins/workspace-tab-names --enabled
+herdr plugin action invoke dotfiles.workspace-tab-names.adopt
+```
+
+新規タブの初期名（数字）をワークスペース名に変え、自動命名したタブはワークスペースの改名にも追従する。作成時に指定した別名や、後から手動変更したタブ名は上書きしない。`adopt` は既にワークスペースと同名のタブを追従対象として登録する。登録はユーザー単位で全セッションに適用され、追従状態はセッションごとに `HERDR_PLUGIN_STATE_DIR` 以下へ保存する。
+
+無効化は `herdr plugin disable dotfiles.workspace-tab-names`。動作ログは `herdr plugin log list --plugin dotfiles.workspace-tab-names` で確認できる。
+
 ### Rootshell に Ghostty のカラーテーマを読み込む
 
 1. [ghostty-rootshell.theme](.config/ghostty/ghostty-rootshell.theme) を iPad の「ファイル」に保存する。Mac から AirDrop で送るか、GitHub のファイル画面から Raw ファイルをダウンロードする。
