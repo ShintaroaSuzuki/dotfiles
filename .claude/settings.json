@@ -28,7 +28,6 @@
     "codex@openai-codex": true,
     "commit-commands@claude-plugins-official": true,
     "commit-commands@shintaroazusuki-plugins": true,
-    "context7@claude-plugins-official": true,
     "document-skills@anthropic-agent-skills": true,
     "elevator-music@sevii-agent-marketplace": false,
     "example-skills@anthropic-agent-skills": true,
