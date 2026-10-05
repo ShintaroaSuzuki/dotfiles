@@ -5,7 +5,7 @@ defaultThinkingLevel: high
 dev:
   autoqaConsent: granted
 tier:
-  openai: priority
+  openai: none
 theme:
   dark: dark-taiga
 symbolPreset: nerd
@@ -33,3 +33,4 @@ composer:
   shape: rule
 browser:
   relay: true
+textVerbosity: low

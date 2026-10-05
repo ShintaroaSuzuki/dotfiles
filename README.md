@@ -49,6 +49,25 @@ $ brew bundle --file=~/dotfiles/.Brewfile
 $ cd dotfiles && stow -v -t ~ .
 ```
 
+## omp の MCP 自動読み込みを無効化する
+
+`~/.omp/agent/mcp.json` の `disabledServers` にサーバー名を指定すると、
+他のツールやプラグイン由来の MCP を omp 側だけで無効化できる。
+Claude Code や Codex の設定、プラグインのキャッシュは変更しない。
+
+```json
+{
+  "disabledServers": [
+    "context7:context7",
+    "node_repl",
+    "openaiDeveloperDocs"
+  ]
+}
+```
+
+既存の MCP 設定がある場合は残す。変更後は omp を再起動するか
+`/mcp reload` を実行し、`/mcp list` で対象が無効になっていることを確認する。
+
 ## Ghostty の外観設定
 
 1. macOS に Ghostty・Swift・uv と、`0xProto`・`MesloLGS NF`・`Hack Nerd Font Mono` をインストールする。
@@ -95,7 +114,9 @@ herdr plugin action invoke dotfiles.workspace-tab-names.adopt
 
 新規タブの初期名（数字）をワークスペース名に変え、自動命名したタブはワークスペースの改名にも追従する。作成時に指定した別名や、後から手動変更したタブ名は上書きしない。`adopt` は既にワークスペースと同名のタブを追従対象として登録する。登録はユーザー単位で全セッションに適用され、追従状態はセッションごとに `HERDR_PLUGIN_STATE_DIR` 以下へ保存する。
 
-無効化は `herdr plugin disable dotfiles.workspace-tab-names`。動作ログは `herdr plugin log list --plugin dotfiles.workspace-tab-names` で確認できる。
+Git リポジトリ移動による自動改名は現行 fork がイベント通知しないため、セッションごとに監視プロセスを1つ起動し、1秒間隔でワークスペース名を確認する。変更があったときだけ同期し、サーバー終了時に監視も終了する。起動済みの別セッションにも適用する場合は、そのセッション内で上記の `adopt` を実行する。
+
+無効化は `herdr plugin disable dotfiles.workspace-tab-names`（監視は待機し、再有効化すると同期を再開）。イベント処理のログは `herdr plugin log list --plugin dotfiles.workspace-tab-names`、監視のログは `HERDR_PLUGIN_STATE_DIR` 以下の `*.watch.log` で確認できる。監視が異常終了した場合はログの原因を解消して `adopt` を再実行する。
 
 ### Rootshell に Ghostty のカラーテーマを読み込む
 
