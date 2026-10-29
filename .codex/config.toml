@@ -1,13 +1,24 @@
-model = "gpt-5.6-luna"
+model = "auto"
+model_provider = "jev-gateway"
+model_catalog_json = "/Users/shintaro/ghq/github.com/atypical-inc/torus/codex-models.json"
+web_search = "disabled"
+
+notify = ["/Users/shintaro/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended"]
 model_reasoning_effort = "low"
-model_verbosity = "low"
-personality = "pragmatic"
 
 approvals_reviewer = "guardian_subagent"
 
+[model_providers.jev-gateway]
+name = "Jev Gateway"
+base_url = "http://127.0.0.1:4000/v1"
+env_key = "JEV_GATEWAY_TOKEN"
+wire_api = "responses"
+supports_websockets = false
+requires_openai_auth = true
+request_max_retries = 0
+stream_max_retries = 0
 
-notify = ["/Users/shintaro/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended"]
-service_tier = "fast"
+
 
 [projects."/Users/shintaro/ghq/github.com/ShintaroaSuzuki/jpx-forward-papertrader"]
 trust_level = "trusted"
@@ -303,6 +314,9 @@ trust_level = "trusted"
 [projects."/private/var/folders/2v/1b4vknxj1dnc17jz5cx45c840000gn/T/atypical-cover-imagegen-3Th7Wh"]
 trust_level = "trusted"
 
+[projects."/Users/shintaro/Documents/Codex/2026-10-06/kon-2"]
+trust_level = "trusted"
+
 [notice]
 fast_default_opt_out = true
 
@@ -318,9 +332,15 @@ source_type = "local"
 source = "/Users/shintaro/.cache/codex-runtimes/codex-primary-runtime/plugins/openai-primary-runtime"
 
 [marketplaces.cognee]
+last_updated = "2026-10-06T01:53:09Z"
+last_revision = "386f02ed52ed35d79184734f0961ac6f58c21519"
 source_type = "git"
 source = "https://github.com/topoteretes/cognee-integrations.git"
 ref = "main"
+
+[marketplaces.openai-plugins-mirror]
+source_type = "local"
+source = "/Users/shintaro/ghq/github.com/openai/plugins"
 
 [plugins."documents@openai-primary-runtime"]
 enabled = true
@@ -346,6 +366,9 @@ enabled = true
 [plugins."visualize@openai-bundled"]
 enabled = true
 
+[plugins."cognee@cognee"]
+enabled = false
+
 [plugins."browser@openai-bundled"]
 enabled = true
 
@@ -355,8 +378,8 @@ enabled = true
 [plugins."unified-computer-use@openai-bundled"]
 enabled = true
 
-[plugins."cognee@cognee"]
-enabled = false
+[plugins."code-review@openai-bundled"]
+enabled = true
 
 [tui.model_availability_nux]
 "gpt-5.5" = 4
@@ -372,32 +395,32 @@ conversationDetailMode = "STEPS_COMMANDS"
 followUpQueueMode = "queue"
 dock-icon-preference = "app-default"
 usePointerCursors = true
+enabled-reasoning-efforts = ["low", "medium", "high", "xhigh", "max"]
 
 [features]
 hooks = true
 js_repl = false
 
 [mcp_servers.node_repl]
-args = []
 command = "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl"
-startup_timeout_sec = 120
+startup_timeout_sec = 120.0
 
 [mcp_servers.node_repl.env]
+BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab,mcpapps"
+BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
+BROWSER_USE_CODEX_APP_VERSION = "26.928.21956"
+BROWSER_USE_TINYSKY_ENABLED = "1"
+CODEX_CLI_PATH = "/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS/codex"
+CODEX_HOME = "/Users/shintaro/.codex"
+NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = ""
+NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = ""
+NODE_REPL_INSTRUCTIONS_USE_CASE_COMPUTER_USE = ""
 NODE_REPL_NATIVE_PIPE_CONNECT_TIMEOUT_MS = "1000"
 NODE_REPL_NODE_MODULE_DIRS = "/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules"
 NODE_REPL_NODE_PATH = "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node"
 NODE_REPL_TRUSTED_CODE_PATHS = "/Users/shintaro/.codex:/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules"
-CODEX_HOME = "/Users/shintaro/.codex"
-BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab"
-BROWSER_USE_TINYSKY_ENABLED = "1"
-NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = ""
-NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = ""
-NODE_REPL_INSTRUCTIONS_USE_CASE_COMPUTER_USE = ""
-BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
-BROWSER_USE_CODEX_APP_VERSION = "26.917.71314"
-NODE_REPL_TRUSTED_SERVICES = '{"browser":"/Users/shintaro/.codex/plugins/cache/openai-bundled/browser/26.917.71314/scripts/browser-service.mjs","sky":"@oai/sky/service"}'
+NODE_REPL_TRUSTED_SERVICES = '{"browser":"/Users/shintaro/.codex/plugins/cache/openai-bundled/browser/26.928.21956/scripts/browser-service.mjs","sky":"@oai/sky/service"}'
 SKY_CUA_SERVICE_PATH = "/Users/shintaro/.codex/computer-use/Codex Computer Use.app"
-CODEX_CLI_PATH = "/Applications/ChatGPT.app/Contents/Resources/codex"
 
 [mcp_servers.computer-use]
 command = "./Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient"
@@ -407,6 +430,13 @@ enabled = false
 
 [mcp_servers.openaiDeveloperDocs]
 url = "https://developers.openai.com/mcp"
+
+[mcp_servers.web-search]
+command = "/Users/shintaro/.nodenv/versions/24.16.0/bin/node"
+args = ["--import", "data:text/javascript,console.log=console.error", "/Users/shintaro/ghq/github.com/mrkrsl/web-search-mcp/dist/index.js"]
+
+[mcp_servers.web-search.env]
+MAX_CONTENT_LENGTH = "10000"
 
 [hooks.state]
 

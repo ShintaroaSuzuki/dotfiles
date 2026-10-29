@@ -2,7 +2,7 @@
   "permissions": {
     "defaultMode": "auto"
   },
-  "model": "fable[1m]",
+  "model": "opus",
   "hooks": {
     "SessionStart": [
       {
@@ -25,7 +25,8 @@
     "document-skills@anthropic-agent-skills": true,
     "elevator-music@sevii-agent-marketplace": false,
     "example-skills@anthropic-agent-skills": true,
-    "ux_concepts@shintaroazusuki-plugins": true
+    "ux_concepts@shintaroazusuki-plugins": true,
+    "claude-security@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "openai-codex": {

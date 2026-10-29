@@ -5,7 +5,7 @@
   "defaultThinkingLevel": "max",
   "packages": [
     "npm:pi-subagents",
-    "git:github.com/injaneity/pi-computer-use@v0.3.1",
+    "npm:@injaneity/pi-computer-use@0.5.1",
     "npm:@bitcraft-apps/pi-web-tools",
     "npm:@howaboua/pi-gippity-control"
   ],
